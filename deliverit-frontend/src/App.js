@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import './App.css';
-import Login from "./components/Login/Login";
+import TestComponent from "./components/TestComponent/TestComponent";
 
 class App extends Component {
   render() {
@@ -10,7 +10,7 @@ class App extends Component {
 
         These are the new changes in LIfe.
 
-        <Login />
+        <TestComponent />
       </div>
     );
   }
