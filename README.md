@@ -5,11 +5,11 @@ Naming Conventions
 ==================
 Component folder, Component.js and Component.css capitalized and camel case
 ## Components
-1. Navbar
+### Navbar
    * Navbar.js
    * Navbar.css
 
 ## Sections
-1. HomeSection
+### HomeSection
    * HomeSection.js
    * HomeSection.css
