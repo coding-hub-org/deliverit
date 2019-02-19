@@ -5,7 +5,7 @@ Naming Conventions
 ==================
 Component folder, Component.js and Component.css capitalized and camel case
 ## Components
-### Navbar
+### :open_file_folder:Navbar
    * Navbar.js
    * Navbar.css
 
