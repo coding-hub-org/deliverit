@@ -9,7 +9,7 @@ Component folder, Component.js and Component.css capitalized and camel case
    * Navbar.js
    * Navbar.css
 
-##Sections
+## Sections
 1. HomeSection
    * HomeSection.js
    * HomeSection.css
