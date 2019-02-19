@@ -10,6 +10,6 @@ Component folder, Component.js and Component.css capitalized and camel case
    * Navbar.css
 
 ## Sections
-### HomeSection
+### :open_file_folder:HomeSection
    * HomeSection.js
    * HomeSection.css
