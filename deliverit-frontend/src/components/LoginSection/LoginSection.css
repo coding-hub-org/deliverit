@@ -1,23 +1,66 @@
 .loginWrapper {
-  border-color: red;
-  border-style: solid;
-  height: 600px;
-  background-image: image();
+  height: 800px;
+  width: 100vh;
+  background-image: url("../../assets/login-img.svg");
+  background-size: 500px;
+  background-repeat: no-repeat;
+  background-position: right bottom;
 }
 
 .inputForm {
-  justify-content: left;
-  border-color: yellow;
-  border-style: solid;
+  position: relative;
   width: 300px;
-  height: 300px;
+  height: 400px;
+  margin-left: 50px;
+  bottom: 0px;
+  top: 30px;
 }
 
-.form h2 {
-  font-size: 20px;
+.inputForm h2 {
+  font-size: 8px;
+  color: #17b0c3;
+  text-align: left;
+  margin-left: 85px;
+}
+.inputForm h3 {
+  font-size: 10px;
+  color: black;
+  text-align: center;
+}
+.inputForm h4 {
+  font-size: 10px;
+  color: black;
+  text-align: left;
+  margin-left: 58px;
+  margin-top: 60px;
+}
+
+.inputForm h4 span {
+  font-size: 10px;
+  color: #f8b64d;
+  text-align: center;
+}
+.inputForm h3 span {
+  font-size: 10px;
+  color: #f05b8a;
+  text-align: center;
 }
 
 .userLogin {
   border-style: solid;
-  border-color: gray;
+  border-color: rgb(197, 197, 197);
+  border-radius: 6px;
+  text-align: center;
+  font-size: 10px;
+  margin-bottom: 15px;
+}
+.loginButton {
+  width: 200px;
+  height: 32px;
+  border-radius: 10px;
+  margin-top: 50px;
+  color: white;
+  background-color: #17b0c3;
+  border-style: solid;
+  border-color: #17b0c3;
 }
