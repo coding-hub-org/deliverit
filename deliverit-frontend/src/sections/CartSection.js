@@ -1,7 +1,7 @@
 import React from 'react';
 import Login from '../components/Login/Login';
 
-class LoginSection extends React.Component {
+class CartSection extends React.Component {
     render() {
         return (
             <Login/>
