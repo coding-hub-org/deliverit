@@ -13,7 +13,6 @@ class App extends Component {
         Welcome to DeliverIt.
 
         These are the new changes in LIfe.
-
         <Login />
         <Footer/>
       </div>
