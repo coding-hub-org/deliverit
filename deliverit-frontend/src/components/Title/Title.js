@@ -3,7 +3,7 @@ import './Title.css';
 
 const Title = (props) => {
     return (
-        <div>
+        <div className="title-component">
             {props.title}
         </div>
     );
