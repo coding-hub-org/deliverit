@@ -1,3 +1,6 @@
 .cart-order-component{
-    width:50%;
+    background-color: #ffffff;
+    text-align: left;
+    height: 70%;
+    overflow: scroll;
 }
