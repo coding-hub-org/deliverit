@@ -53,12 +53,11 @@ class CartPageSection extends Component {
                     />
                     <PaymentForm handleChange={this.handleChangeForm} handleSubmit={this.handleSubmitForm}/>
                 </div>
-                <div>
+                <div  className="cart-page-section__body__order"> 
                     <CartOrder listOfItem={testList}/>        
                 </div>
                 
             </div>
-            <Footer/>
         </div>
         );
     }
