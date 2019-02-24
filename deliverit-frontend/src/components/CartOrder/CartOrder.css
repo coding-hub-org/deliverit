@@ -1,6 +1,6 @@
 .cart-order-component{
     background-color: #ffffff;
     text-align: left;
-    height: 70%;
-    overflow: scroll;
+    height: 70vh;
+    overflow-y: scroll;
 }

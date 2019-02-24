@@ -55,6 +55,9 @@ class CartPageSection extends Component {
                 </div>
                 <div  className="cart-page-section__body__order"> 
                     <CartOrder listOfItem={testList}/>        
+                    <div className="cart-page-section__body__order__summary">
+                        
+                    </div>
                 </div>
                 
             </div>
