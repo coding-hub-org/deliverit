@@ -8,16 +8,18 @@ const CartOrder = (props) =>{
 
     const itemList=props.listOfItem.map(item => {
         return (
-        <ItemTag name={item.name} 
+        <ItemTag key={item.id} name={item.name} 
         quantity={item.quantity}
         price={item.price * item.quantity}
          />);
     })
     
     return (
+        <div>
+        <Title title="YOUR ORDER"/>
         <div className="cart-order-component" >
-            <Title title="YOUR ORDER"/>
             {itemList}
+        </div>
         </div>
     );
 }
