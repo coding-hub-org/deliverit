@@ -12,59 +12,75 @@
   display:grid;
   justify-items: center;
   padding-top: 20px;
+
 }
 
-/* LoginSection-section--loginWrapper__alignDiv--loginForm */
 
-.loginForm {
+.LoginSection-section--loginWrapper__alignDiv--loginForm {
   position: relative;
   width: 200px;
   justify-content: center;
   align-content: center;
 
+
+
+}
+.LoginSection-section--loginWrapper__alignDiv--loginForm h3 br{
+display: none;
+
 }
 
-.loginForm h1 {
+.LoginSection-section--loginWrapper__alignDiv--loginForm h4 span br{
+  display: none;
+  
+  }
+
+
+.LoginSection-section--loginWrapper__alignDiv--loginForm h1 {
   text-align: center;
+  font-size: 40px;
+  padding-left: 5px;
 }
 
-.loginForm h2 {
+.LoginSection-section--loginWrapper__alignDiv--loginForm h2 {
   font-size: 8px;
   color: #17b0c3;
   text-align: left;
   margin-left: 85px;
 }
-.loginForm h3 {
+.LoginSection-section--loginWrapper__alignDiv--loginForm h3 {
   font-size: 10px;
   color: black;
   text-align: center;
 }
-.loginForm h4 {
+.LoginSection-section--loginWrapper__alignDiv--loginForm h4 {
   font-size: 10px;
   color: black;
   text-align: left;
 }
 
-.loginForm h4 span {
+.LoginSection-section--loginWrapper__alignDiv--loginForm h4 span {
   font-size: 10px;
   color: #f8b64d;
   text-align: center;
+  
 }
-.loginForm h3 span {
+.LoginSection-section--loginWrapper__alignDiv--loginForm h3 span {
   font-size: 10px;
   color: #f05b8a;
   text-align: center;
 }
 
-.userLogin {
+.LoginSection-section--loginWrapper__alignDiv--loginForm__userLogin {
   border-style: solid;
   border-color: rgb(197, 197, 197);
   border-radius: 6px;
   text-align: center;
   font-size: 10px;
   margin-bottom: 15px;
+  
 }
-.loginButton {
+.LoginSection-section--loginWrapper__alignDiv--loginForm__loginButton {
   width: 200px;
   height: 32px;
   border-radius: 10px;
@@ -85,13 +101,13 @@
 }
 
 
-.leaningMan {
+.LoginSection-section--loginWrapper__alignDiv--leaningLogo__leaningMan {
   box-sizing: border-box;
   height: 200px;
  width: 100vw;
 }
 
-.leaningLogo{
+.LoginSection-section--loginWrapper__alignDiv--leaningLogo{
 
   position: absolute;
   bottom:0;
@@ -99,3 +115,98 @@
   justify-items: center;
 
 }
+
+@media (min-width: 400px) {
+ 
+  .LoginSection-section--loginWrapper__alignDiv{
+    display:grid;
+    justify-items: center;
+    padding-top: 50px;
+ 
+  
+  }
+}
+@media (min-width: 400px ), (min-height:800px) {
+ 
+  .LoginSection-section--loginWrapper__alignDiv{
+    display:grid;
+    justify-items: center;
+    padding-top: 90px;
+    
+ 
+  
+  }
+  .LoginSection-section--loginWrapper__alignDiv--loginForm {
+    overflow-wrap: break-word;
+  
+  }
+
+  .LoginSection-section--loginWrapper__alignDiv--loginForm h3 br{
+    display: block;
+    
+    }
+    
+  .LoginSection-section--loginWrapper__alignDiv--loginForm h4 span br {
+      display: block;
+      
+      }
+
+
+  .LoginSection-section--loginWrapper__alignDiv--loginForm h2 {
+    font-size: 14px;
+    color: #17b0c3;
+    text-align: left;
+    margin-left: 70px;
+  }
+  .LoginSection-section--loginWrapper__alignDiv--loginForm h3 {
+    font-size: 14px;
+    color: black;
+    text-align: center;
+  }
+  .LoginSection-section--loginWrapper__alignDiv--loginForm h4 {
+    font-size: 14px;
+    color: black;
+    text-align: center;
+  }
+  
+  .LoginSection-section--loginWrapper__alignDiv--loginForm h4 span {
+    font-size: 14px;
+    color: #f8b64d;
+    
+  }
+  .LoginSection-section--loginWrapper__alignDiv--loginForm h3 span {
+    font-size: 14px;
+    color: #f05b8a;
+    text-align: center;
+  }
+  
+  .LoginSection-section--loginWrapper__alignDiv--loginForm__userLogin {
+    border-style: solid;
+    border-color: rgb(197, 197, 197);
+    border-radius: 6px;
+    text-align: center;
+    font-size: 16px;
+    margin-bottom: 15px;
+    padding-top: 6px;
+    
+  }
+  .LoginSection-section--loginWrapper__alignDiv--loginForm__loginButton {
+    width: 200px;
+    height: 32px;
+    border-radius: 10px;
+    margin-top: 20px;
+    color: white;
+    background-color: #17b0c3;
+    border-style: solid;
+    border-color: #17b0c3;
+  }
+
+  .LoginSection-section--loginWrapper__birdLogo img { 
+    height: 90px;
+    padding-top: 40px;
+    
+    
+  }
+
+}
+
