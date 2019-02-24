@@ -11,7 +11,7 @@
 .LoginSection-section--loginWrapper__alignDiv{
   display:grid;
   justify-items: center;
-  padding-top: 20px;
+  padding-top: 10px;
 
 }
 
@@ -21,8 +21,7 @@
   width: 200px;
   justify-content: center;
   align-content: center;
-
-
+  top: -30px;
 
 }
 .LoginSection-section--loginWrapper__alignDiv--loginForm h3 br{
@@ -43,32 +42,48 @@ display: none;
 }
 
 .LoginSection-section--loginWrapper__alignDiv--loginForm h2 {
-  font-size: 8px;
+  font-size: 12px;
   color: #17b0c3;
   text-align: left;
-  margin-left: 85px;
+  margin-left: 75px;
 }
 .LoginSection-section--loginWrapper__alignDiv--loginForm h3 {
-  font-size: 10px;
+  font-size: 12px;
   color: black;
   text-align: center;
 }
 .LoginSection-section--loginWrapper__alignDiv--loginForm h4 {
-  font-size: 10px;
+  font-size: 12px;
   color: black;
   text-align: left;
 }
 
 .LoginSection-section--loginWrapper__alignDiv--loginForm h4 span {
-  font-size: 10px;
+  font-size: 12px;
   color: #f8b64d;
   text-align: center;
   
 }
 .LoginSection-section--loginWrapper__alignDiv--loginForm h3 span {
-  font-size: 10px;
+  font-size: 12px;
   color: #f05b8a;
   text-align: center;
+  
+}
+
+.LoginSection-section--loginWrapper__alignDiv--loginForm h3 span br {
+  display: block;
+  
+}
+.LoginSection-section--loginWrapper__alignDiv--loginForm h4{
+  text-align: center;
+  
+}
+
+.LoginSection-section--loginWrapper__alignDiv--loginForm h4 span{
+  text-align: center;
+  display: block;
+  
 }
 
 .LoginSection-section--loginWrapper__alignDiv--loginForm__userLogin {
@@ -76,7 +91,7 @@ display: none;
   border-color: rgb(197, 197, 197);
   border-radius: 6px;
   text-align: center;
-  font-size: 10px;
+  font-size: 14px;
   margin-bottom: 15px;
   
 }
@@ -116,97 +131,206 @@ display: none;
 
 }
 
-@media (min-width: 400px) {
- 
-  .LoginSection-section--loginWrapper__alignDiv{
-    display:grid;
-    justify-items: center;
-    padding-top: 50px;
- 
-  
-  }
-}
-@media (min-width: 400px ), (min-height:800px) {
- 
-  .LoginSection-section--loginWrapper__alignDiv{
-    display:grid;
-    justify-items: center;
-    padding-top: 90px;
-    
- 
-  
-  }
-  .LoginSection-section--loginWrapper__alignDiv--loginForm {
-    overflow-wrap: break-word;
-  
-  }
 
-  .LoginSection-section--loginWrapper__alignDiv--loginForm h3 br{
-    display: block;
-    
-    }
-    
-  .LoginSection-section--loginWrapper__alignDiv--loginForm h4 span br {
-      display: block;
-      
-      }
+/*-------------------------------------------------------------*/
 
+/*---------------------------MEDIA QUERIES---------------------*/
 
+/*-------------------------------------------------------------*/
+@media (min-width:768px) {
+ 
+ 
+  .LoginSection-section--loginWrapper__alignDiv--loginForm h1 {
+    text-align: center;
+    font-size: 70px;
+    padding-left: 5px;
+  }
+  
   .LoginSection-section--loginWrapper__alignDiv--loginForm h2 {
-    font-size: 14px;
+    font-size: 20px;
     color: #17b0c3;
     text-align: left;
-    margin-left: 70px;
+    margin-left: 50px;
   }
   .LoginSection-section--loginWrapper__alignDiv--loginForm h3 {
-    font-size: 14px;
+    font-size: 20px;
     color: black;
     text-align: center;
+    margin-bottom: 0px;
   }
   .LoginSection-section--loginWrapper__alignDiv--loginForm h4 {
-    font-size: 14px;
+    font-size: 20px;
     color: black;
     text-align: center;
   }
   
   .LoginSection-section--loginWrapper__alignDiv--loginForm h4 span {
-    font-size: 14px;
+    font-size: 20px;
     color: #f8b64d;
+    text-align: center;
     
   }
   .LoginSection-section--loginWrapper__alignDiv--loginForm h3 span {
-    font-size: 14px;
+    font-size: 20px;
     color: #f05b8a;
     text-align: center;
+    
   }
+
+  .LoginSection-section--loginWrapper__alignDiv--loginForm {
+    position: relative;
+    width: 400px;
+    justify-content: center;
+    align-content: center;
+    
   
+  }
+
+  .LoginSection-section--loginWrapper__alignDiv--leaningLogo__leaningMan {
+    box-sizing: border-box;
+    height: 370px;
+   width: 100vw;
+  }
+
   .LoginSection-section--loginWrapper__alignDiv--loginForm__userLogin {
     border-style: solid;
-    border-color: rgb(197, 197, 197);
     border-radius: 6px;
     text-align: center;
-    font-size: 16px;
+    font-size: 26px;
     margin-bottom: 15px;
-    padding-top: 6px;
     
   }
   .LoginSection-section--loginWrapper__alignDiv--loginForm__loginButton {
-    width: 200px;
-    height: 32px;
+    width: 350px;
+    height: 50px;
     border-radius: 10px;
-    margin-top: 20px;
-    color: white;
-    background-color: #17b0c3;
+    margin-top: 5px;
     border-style: solid;
-    border-color: #17b0c3;
-  }
+    font-size: 25px;
+    }
 
-  .LoginSection-section--loginWrapper__birdLogo img { 
-    height: 90px;
-    padding-top: 40px;
+    .LoginSection-section--loginWrapper__alignDiv{
+      display:grid;
+      justify-items: center;
+      padding-top: 5px;
+   
     
-    
-  }
+    }
 
 }
 
+
+/*-------------------------------------------------------------*/
+
+/*----------------MEDIA QUERIE FOR DESKTOP---------------------*/
+
+/*-------------------------------------------------------------*/
+
+
+@media (min-width:1000px) {
+
+  .LoginSection-section--loginWrapper{
+    display:grid;
+    grid-template-columns: 50% 50%;
+    grid-template-rows: auto 1fr;
+    width: 100vw;
+    overflow: hidden;
+    }
+
+  .LoginSection-section--loginWrapper__birdLogo img{
+
+      height: 70px;
+      float: left;
+      margin-left: -500px;
+      padding-top: 20px;
+  }
+
+  
+  .LoginSection-section--loginWrapper__alignDiv {
+    grid-column: 1;
+  
+  }
+
+  .LoginSection-section--loginWrapper__alignDiv--leaningLogo{
+    /* display: block; */
+    grid-column: 2;
+    display: flex;
+    align-items: flex-end;
+    position: relative;
+    }
+  .LoginSection-section--loginWrapper__alignDiv--leaningLogo img{
+    height: 650px;
+    width: 1000px;
+    float: right;
+    margin-left: 80px;
+  }
+
+  .LoginSection-section--loginWrapper__alignDiv--loginForm h1 {
+    text-align: center;
+    font-size: 35px;
+    padding-left: 5px;
+  }
+  
+  .LoginSection-section--loginWrapper__alignDiv--loginForm h2 {
+    font-size: 16px;
+    color: #17b0c3;
+    text-align: left;
+    margin-left: 80px;
+  }
+  .LoginSection-section--loginWrapper__alignDiv--loginForm h3 {
+    font-size: 16px;
+    color: black;
+    text-align: center;
+    margin-bottom: 0px;
+    padding-bottom: 100px;
+  }
+  .LoginSection-section--loginWrapper__alignDiv--loginForm h4 {
+    font-size: 16px; 
+    color: black;
+    text-align: center;
+  }
+  
+  .LoginSection-section--loginWrapper__alignDiv--loginForm h4 span {
+    font-size: 16px;
+    color: #f8b64d;
+    text-align: center;
+    
+    
+  }
+  .LoginSection-section--loginWrapper__alignDiv--loginForm h3 span {
+    font-size: 20px;
+    color: #f05b8a;
+    text-align: center;
+    
+    
+  }
+
+  
+  .LoginSection-section--loginWrapper__alignDiv--loginForm__userLogin {
+    border-style: solid;
+    border-radius: 8px;
+    text-align: center;
+    font-size: 20px;
+    padding-bottom: 5px;
+    padding-top: 10px;
+    
+  }
+
+  .LoginSection-section--loginWrapper__alignDiv--loginForm {
+    position: relative;
+    width: 400px;
+    justify-content: center;
+    align-content: center;
+    padding-top: 100px;
+    padding-left: 100px;
+    
+  
+  }
+  .LoginSection-section--loginWrapper__alignDiv--loginForm__loginButton {
+ 
+    border-radius: 10px;
+    margin-top: 60px;
+  
+    }
+
+}
