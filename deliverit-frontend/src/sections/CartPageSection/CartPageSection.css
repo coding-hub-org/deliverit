@@ -13,6 +13,6 @@
     grid-template-rows: repeat(2,1fr);
 }
 .cart-page-section__body__order{
-    /* height:100%; */
+    max-height:100%; 
     overflow: scroll;
 }

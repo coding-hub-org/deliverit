@@ -5,6 +5,7 @@ import Title from '../Title/Title';
 
 
 const CartOrder = (props) =>{
+
     const itemList=props.listOfItem.map(item => {
         return (
         <ItemTag name={item.name} 
@@ -12,6 +13,7 @@ const CartOrder = (props) =>{
         price={item.price * item.quantity}
          />);
     })
+    
     return (
         <div className="cart-order-component" >
             <Title title="YOUR ORDER"/>
