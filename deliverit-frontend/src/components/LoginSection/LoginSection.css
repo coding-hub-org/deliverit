@@ -1,46 +1,56 @@
-.loginWrapper {
-  height: 800px;
-  width: 100vh;
-  background-image: url("../../assets/login-img.svg");
-  background-size: 500px;
+
+
+.LoginSection-section .LoginSection-section--loginWrapper {
+  height: 100vh;
+  width: 100vw;
   background-repeat: no-repeat;
-  background-position: right bottom;
+
+  
 }
 
-.inputForm {
+.LoginSection-section--loginWrapper__alignDiv{
+  display:grid;
+  justify-items: center;
+  padding-top: 20px;
+}
+
+/* LoginSection-section--loginWrapper__alignDiv--loginForm */
+
+.loginForm {
   position: relative;
-  width: 300px;
-  height: 400px;
-  margin-left: 50px;
-  bottom: 0px;
-  top: 30px;
+  width: 200px;
+  justify-content: center;
+  align-content: center;
+
 }
 
-.inputForm h2 {
+.loginForm h1 {
+  text-align: center;
+}
+
+.loginForm h2 {
   font-size: 8px;
   color: #17b0c3;
   text-align: left;
   margin-left: 85px;
 }
-.inputForm h3 {
+.loginForm h3 {
   font-size: 10px;
   color: black;
   text-align: center;
 }
-.inputForm h4 {
+.loginForm h4 {
   font-size: 10px;
   color: black;
   text-align: left;
-  margin-left: 58px;
-  margin-top: 60px;
 }
 
-.inputForm h4 span {
+.loginForm h4 span {
   font-size: 10px;
   color: #f8b64d;
   text-align: center;
 }
-.inputForm h3 span {
+.loginForm h3 span {
   font-size: 10px;
   color: #f05b8a;
   text-align: center;
@@ -58,9 +68,34 @@
   width: 200px;
   height: 32px;
   border-radius: 10px;
-  margin-top: 50px;
+  margin-top: 5px;
   color: white;
   background-color: #17b0c3;
   border-style: solid;
   border-color: #17b0c3;
+}
+
+ .LoginSection-section--loginWrapper__birdLogo { 
+  height: 70px;
+  display: grid;
+  position: relative;
+  justify-items: center;
+  padding-top: 20px;
+  
+}
+
+
+.leaningMan {
+  box-sizing: border-box;
+  height: 200px;
+ width: 100vw;
+}
+
+.leaningLogo{
+
+  position: absolute;
+  bottom:0;
+  display: grid;
+  justify-items: center;
+
 }
