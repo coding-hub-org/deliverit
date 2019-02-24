@@ -1,16 +1,13 @@
-import React, { Component } from 'react';
-import './App.css';
+import React, { Component } from "react";
+import "./App.css";
 import TestComponent from "./components/TestComponent/TestComponent";
+import UserProfileSection from "./sections/UserProfileSection/UserProfileSection";
 
 class App extends Component {
   render() {
     return (
       <div className="App">
-        Welcome to DeliverIt.
-
-        These are the new changes in LIfe.
-
-        <TestComponent />
+        <UserProfileSection />
       </div>
     );
   }
