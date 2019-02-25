@@ -8,11 +8,7 @@ const LoginRegisterHeader = props => {
   return (
     <div className="LoginRegisterHeader">
       <img className="Registerlogo" src={Logo} alt="" />
-      <div className="FormWrapperGrid">
-        <div className="FormGrid">
-
-        </div>
-      </div>
+      
     </div>
     
   );

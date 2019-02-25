@@ -1,0 +1,23 @@
+.FormWrapperGrid{
+  display: grid;
+  grid-template-rows: auto;
+  grid-template-columns: 50% 50%;
+  grid-column-gap: 10px;
+  margin-top: 60px;
+}
+.FormGrid{
+  display: grid;
+}
+
+p {
+  grid-column: 1/2;
+  background: red;
+}
+h2{
+  grid-column: 2/3;
+  background: blue;
+}
+img {
+ height: 400px;
+
+}
