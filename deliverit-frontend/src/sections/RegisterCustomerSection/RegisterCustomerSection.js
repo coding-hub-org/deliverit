@@ -12,10 +12,18 @@ const RegisterCustomerSection = props => {
       <div className="FormWrapperGrid">
        
         <div className="FormGrid">
-        <p>hi</p>
+        <h1 className="FormLabel">Register</h1>
+        <form action="">
+          <input type="text" id="FullName"/>
+          <input type="tel" name="" id="Phone"/>
+          <input type="email" name="" id="Email"/>
+          <input type="text" id="NextPhone"/>
+          <input type="password" name="" id="Password"/>
+          <input type="password" name="" id="ConfirmPassword"/>
+        </form>
        
         </div>
-        <img src={FormImage} alt=""/>
+        <img className="FormLogo" src={FormImage} alt=""/>
       </div>
     </div>
     
