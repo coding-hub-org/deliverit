@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import StarIcon from "../../assets/star.svg";
 import "./UserProfileSection.css";
 
 class UserProfileSection extends Component {
@@ -18,7 +19,30 @@ class UserProfileSection extends Component {
             </button>
           </div>
           <div className="user-profile-section-content">
-            <div className="user-profile-section-rating" />
+            <div className="user-profile-section-rating">
+              <div className="user-profile-section-rating-title">
+                <h3>Rating</h3>
+              </div>
+              <div className="user-profile-section-rating-stats-wrapper">
+                <div className="user-profile-section-rating-overall">
+                  <p>8.9</p>
+                </div>
+                <div className="user-profile-section-rating-stars">
+                  <img
+                    className="user-profile-section-rating-star"
+                    src={StarIcon}
+                  />
+                  <img
+                    className="user-profile-section-rating-star"
+                    src={StarIcon}
+                  />
+                  <img
+                    className="user-profile-section-rating-star"
+                    src={StarIcon}
+                  />
+                </div>
+              </div>
+            </div>
             <div className="user-profile-section-stats" />
             <div className="user-profile-section-account-information">
               <div className="user-profile-section-name" />
