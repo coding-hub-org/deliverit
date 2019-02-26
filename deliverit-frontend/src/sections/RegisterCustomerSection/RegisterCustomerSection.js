@@ -6,12 +6,12 @@ import LoginRegisterHeader from "../../components/LoginRegisterHeader/LoginRegis
 
 const RegisterCustomerSection = props => {
   return (
-    <div className="RegisterCustomerSection">
+    <div className="register-customer-section">
       <LoginRegisterHeader />
-      <div className="FormWrapperGrid">
+      <div className="register-customer-section--wrapper">
         <form action="">
-          <div className="FormGrid">
-            <h1 className="FormLabel">Register</h1>
+          <div className="register-customer-section--form_grid">
+            <h1 className="register-customer-section--form_label">Register</h1>
             <div id="input-div">
               <label for="name">Full name</label>
               <br />
@@ -46,7 +46,11 @@ const RegisterCustomerSection = props => {
           </div>
         </form>
 
-        <img className="FormLogo" src={FormImage} alt="" />
+        <img
+          className="register-customer-section--form_logo"
+          src={FormImage}
+          alt=""
+        />
       </div>
     </div>
   );
