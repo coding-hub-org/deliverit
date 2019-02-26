@@ -14,8 +14,13 @@ const ItemTag =(props) =>{
             <div>
                 {props.name}
             </div>
-            <div>
+            <div className="item-tag-component__quantity">
+                <div>
                 {props.quantity}
+                </div>
+                <div className="item-tag-component__quantity-buttons">
+                    
+                </div>
             </div>
             <div>
                 {props.price}$

@@ -2,5 +2,15 @@
     width: 100%;
     background-color: #FFFFFF;
     display: grid;
-    grid-template-columns: 2fr 5fr 1fr 2fr;
+    grid-template-columns: 2fr 4fr 2fr 2fr;
+    
+    justify-content: center;
+}
+.item-tag-component__quantity{
+    display: grid;
+    grid-template-columns: 9fr 1fr;
+}
+.item-tag-component__quantity-buttons{
+    display:grid;
+    grid-template-rows: 1fr 1fr;
 }

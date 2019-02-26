@@ -32,7 +32,9 @@ const PaymentForm = (props)=>
                         <input type="text" id="cardCode" onChange={handleChange}/>
                     </div>
                 </div>
-                <button>PURCHASE</button>
+                <button className="payment-form-component__form__button">
+                    PURCHASE
+                </button>
             </form>
         </div>
     );

@@ -18,16 +18,7 @@ class CartPageSection extends Component {
             cardCode : null,
             testList: [
                 {id: "001", name :"Gaurav" , quantity : 1, price: 1},
-                {id: "002",name :"Logo", quantity: 2, price :100},
-                {id: "003", name :"Logo", quantity: 2, price :100},
-                {id: "004", name :"Logo", quantity: 2, price :100},
-                {id: "005", name :"Logo", quantity: 2, price :100},
-                {id: "006", name :"Logo", quantity: 2, price :100},
-                {id: "007", name :"Logo", quantity: 2, price :100},
-                {id: "8", name :"Logo", quantity: 2, price :100},
-                {id: "9", name :"Logo", quantity: 2, price :100},
-                {id: "10", name :"Logo", quantity: 2, price :100},
-                {id: "11", name :"Logo", quantity: 2, price :100}
+                {id: "002",name :"Logo", quantity: 2, price :100}
               ],
               subTotal: 0,
               deliveryFee: 100,
@@ -63,6 +54,10 @@ class CartPageSection extends Component {
     {
         //Do the sumbit here
     }
+    handleChangeNumber = ()=>
+    {
+
+    }
     handleChangeForm =(e) =>
     {
         this.setState(
@@ -72,10 +67,13 @@ class CartPageSection extends Component {
         );
     }
     render() {
-        console.log("This is life " + this.state.subTotal);
         return (
         <div className="cart-page-section">
-            <Title title="Checkout"/>
+            <div className="cart-page-section__title">
+                <Title title="Checkout"/>
+            </div>
+            <div>
+            </div>
             <div className="cart-page-section__body">
                 <div className="cart-page-section__body__detail">
                     <DeliveryDetailForm 
@@ -121,6 +119,8 @@ class CartPageSection extends Component {
                     </div>
                 </div>
                 
+            </div>
+            <div>
             </div>
         </div>
         );
