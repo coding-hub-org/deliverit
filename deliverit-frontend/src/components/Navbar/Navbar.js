@@ -1,6 +1,6 @@
 import React from "react";
 import "./Navbar.css";
-import SearchBar from "../../components/SearchBar/SearchBar";
+import SearchBar from "../SearchBar/SearchBar";
 import Logo from "../../assets/logo.png";
 
 const Navbar = () => {
