@@ -10,7 +10,7 @@ class App extends Component {
 
         <Header/>
         <Footer/>
-//         <Login />
+        {/* <Login /> */}
     
       </div>
     );
