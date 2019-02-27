@@ -6,11 +6,3 @@
     
     justify-content: center;
 }
-.item-tag-component__quantity{
-    display: grid;
-    grid-template-columns: 9fr 1fr;
-}
-.item-tag-component__quantity-buttons{
-    display:grid;
-    grid-template-rows: 1fr 1fr;
-}
