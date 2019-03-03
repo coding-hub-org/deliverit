@@ -5,6 +5,7 @@ import CartOrder from '../../components/CartOrder/CartOrder';
 import DeliveryDetailForm from '../../components/DeliveryDetailForm/DeliveryDetailForm';
 import PaymentForm from '../../components/PaymentForm/PaymentForm';
 import Title from '../../components/Title/Title';
+import SectionTitle from '../../components/SectionTitle/SectionTitle';
 
 
 class CartPageSection extends Component {
@@ -18,7 +19,20 @@ class CartPageSection extends Component {
             cardCode : null,
             testList: [
                 {id: "001", name :"Gaurav" , quantity : 1, price: 1},
-                {id: "002",name :"Logo", quantity: 2, price :100}
+                {id: "002", name :"Gaurav" , quantity : 1, price: 1},
+                {id: "003", name :"Gaurav" , quantity : 1, price: 1},
+                {id: "004", name :"Gaurav" , quantity : 1, price: 1},
+                {id: "005", name :"Gaurav" , quantity : 1, price: 1},
+                {id: "006", name :"Gaurav" , quantity : 1, price: 1},
+                {id: "007", name :"Gaurav" , quantity : 1, price: 1},
+                {id: "008", name :"Gaurav" , quantity : 1, price: 1},
+                {id: "009", name :"Gaurav" , quantity : 1, price: 1},
+                {id: "010", name :"Gaurav" , quantity : 1, price: 1},
+                {id: "011", name :"Gaurav" , quantity : 1, price: 1},
+                {id: "012", name :"Gaurav" , quantity : 1, price: 1},
+                {id: "013", name :"Gaurav" , quantity : 1, price: 1},
+                {id: "014", name :"Gaurav" , quantity : 1, price: 1},
+                {id: "015",name :"Logo", quantity: 2, price :100}
               ],
               subTotal: 0,
               deliveryFee: 100,
@@ -70,7 +84,7 @@ class CartPageSection extends Component {
         return (
         <div className="cart-page-section">
             <div className="cart-page-section__title">
-                <Title title="Checkout"/>
+                <SectionTitle title="Checkout"/>
             </div>
             <div>
             </div>
