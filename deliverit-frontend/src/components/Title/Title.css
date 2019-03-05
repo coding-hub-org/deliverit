@@ -2,7 +2,7 @@
     color:#a3a6a9;
     font-size: 20px;
     font-weight: bold;
-    height: 5vh;
+    min-height: max-content(20px,5vh);
     border-bottom: #eeeeee thin; 
     border-bottom-style: solid;
     
