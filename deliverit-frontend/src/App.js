@@ -8,12 +8,6 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-
-        <Header/>
-        <CartPageSection/>
-        <Footer/>
-        {/* <Login /> */}
-    
       </div>
     );
   }
