@@ -1,7 +1,7 @@
 .cart-order-component{
     background-color: #ffffff;
     text-align: left;
-    height: 70vh;
+    height: 60vh;
     overflow-y: scroll;
 }
 .cart-order-component::-webkit-scrollbar {
