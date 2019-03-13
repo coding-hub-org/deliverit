@@ -10,8 +10,9 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        <LoginSection />
-        {/* <Footer /> */}
+        {/* <LoginSection />
+        <Footer /> */}
+        <CartPageSection />
       </div>
     );
   }
