@@ -176,6 +176,16 @@
   .LoginSection-section {
     padding: 50px;
   }
+  .LoginSection-section--loginWrapper {
+    grid-template-columns: 1fr;
+  }
+  .LoginSection-section--loginWrapper__alignDiv {
+    width: 60%;
+  }
+  .LoginSection-section--loginWrapper__alignDiv--leaningLogo__leaningMan {
+    /* width: 80%; */
+    display: none;
+  }
 }
 /*-------------------------------------------------------------*/
 
@@ -184,42 +194,27 @@
 /*-------------------------------------------------------------*/
 
 @media (max-width: 768px) {
+  .LoginSection-section--loginWrapper__alignDiv {
+    width: 80%;
+  }
+}
+
+@media (max-width: 500px) {
+  .LoginSection-section--loginWrapper__alignDiv {
+    width: 90%;
+  }
   .LoginSection-section--loginWrapper__alignDiv--loginForm h1 {
+    font-size: 40px;
   }
-
-  .LoginSection-section--loginWrapper__alignDiv--loginForm h2 {
-    color: #17b0c3;
-    text-align: left;
-  }
-  .LoginSection-section--loginWrapper__alignDiv--loginForm h3 {
-    text-align: center;
-    margin-bottom: 0px;
-  }
-  .LoginSection-section--loginWrapper__alignDiv--loginForm h4 {
-    color: black;
-    text-align: center;
-  }
-
-  .LoginSection-section--loginWrapper__alignDiv--leaningLogo__leaningMan {
-    box-sizing: border-box;
-    /* height: 370px; */
-  }
-
+  .LoginSection-section--loginWrapper__alignDiv--loginForm h2,
   .LoginSection-section--loginWrapper__alignDiv--loginForm__userLogin {
-    border-style: solid;
-    font-size: 18px;
-    margin-bottom: 15px;
+    font-size: 14px;
   }
-
-  .LoginSection-section--loginWrapper__alignDiv--loginForm__loginButton {
-    border-style: solid;
+  .LoginSection-section--loginWrapper__alignDiv--loginForm h3,
+  .LoginSection-section--loginWrapper__alignDiv--loginForm h4 {
     font-size: 16px;
   }
-
-  .LoginSection-section--loginWrapper__alignDiv {
-    display: grid;
-    width: 70%;
-    justify-items: center;
-    /* padding-top: 5px; */
+  .LoginSection-section--loginWrapper__alignDiv--loginForm h3 {
+    padding-bottom: 60px;
   }
 }
