@@ -13,9 +13,11 @@ const Navbar = () => {
         <SearchBar />
       </div>
       <div className="navbar-component--navbar-links">
-        <a href="">LOGIN</a>
-        <a href="">SIGNUP</a>
-        <a href=""><i class="fas fa-map-marker-alt"></i></a>
+        <a href="#">LOGIN</a>
+        <a href="#">SIGNUP</a>
+        <a href="#">
+          <i class="fas fa-map-marker-alt" />
+        </a>
       </div>
     </div>
   );

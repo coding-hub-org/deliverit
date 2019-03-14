@@ -1,9 +1,11 @@
-.title-component{
-    color:#a3a6a9;
-    font-size: 20px;
-    font-weight: bold;
-    min-height: max-content(20px,5vh);
-    border-bottom: #eeeeee thin; 
-    border-bottom-style: solid;
-    
+.title-component {
+  color: #a3a6a9;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.title-component > hr {
+  height: 1px;
+  border: 0;
+  border-top: 1px solid #eee;
 }

@@ -1,24 +1,27 @@
-.cart-order-component{
-    background-color: #ffffff;
-    text-align: left;
-    height: 60vh;
-    overflow-y: scroll;
+.cart-order-component {
+  background-color: #ffffff;
+  text-align: left;
+  height: 60vh;
+  overflow-y: scroll;
+  padding-top: 20px;
 }
+
 .cart-order-component::-webkit-scrollbar {
-    width: 10px;
+  /* padding: 20px; */
+  width: 10px;
 }
-  /* Track */
+/* Track */
 .cart-order-component::-webkit-scrollbar-track {
-    opacity: 0;
+  opacity: 0;
 }
 
-  /* Handle */
+/* Handle */
 .cart-order-component::-webkit-scrollbar-thumb {
-    background:#17b0c3; 
-    border-radius: 10px;
+  background: #17b0c3;
+  border-radius: 10px;
 }
 
-  /* Handle on hover */
+/* Handle on hover */
 .cart-order-component::-webkit-scrollbar-thumb:hover {
-    background: #17b0cf; 
+  background: #17b0cf;
 }
