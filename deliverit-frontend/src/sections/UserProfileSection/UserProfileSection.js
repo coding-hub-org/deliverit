@@ -2,12 +2,22 @@ import React, { Component } from "react";
 import StarIcon from "../../assets/star.svg";
 import TempPicture from "../../assets/register-img.svg";
 import "./UserProfileSection.css";
-import AccountDetail from "../../components/AccountDetail/AccountDetail";
 import FlatButton from "../../components/FlatButton/FlatButton";
 import Header from "../../components/Header/Header";
 import Footer from "../../components/Footer/Footer";
+import PropTypes from "prop-types";
 
 class UserProfileSection extends Component {
+  generateStars = () => {
+    let stars = [];
+    for (var i = 0; i < Math.round(this.props.overallRating || 0); ++i) {
+      stars.push(
+        <img className="user-profile-section--rating-star" src={StarIcon} />
+      );
+    }
+    return stars;
+  };
+
   render() {
     return (
       <div className="user-profile">
@@ -29,27 +39,16 @@ class UserProfileSection extends Component {
           </div>
           <div className="user-profile-section--content">
             <div className="user-profile-section--rating">
-              <div classname="user-profile-section--rating-wrapper">
+              <div className="user-profile-section--rating-wrapper">
                 <div className="user-profile-section--rating-title">
                   <h3>Rating</h3>
                 </div>
                 <div className="user-profile-section--rating-overall-wrapper">
                   <div className="user-profile-section--rating-overall">
-                    <p>8.9</p>
+                    <p>{this.props.overallRating || "?"}</p>
                   </div>
                   <div className="user-profile-section--rating-stars">
-                    <img
-                      className="user-profile-section--rating-star"
-                      src={StarIcon}
-                    />
-                    <img
-                      className="user-profile-section--rating-star"
-                      src={StarIcon}
-                    />
-                    <img
-                      className="user-profile-section--rating-star"
-                      src={StarIcon}
-                    />
+                    {this.generateStars()}
                   </div>
                 </div>
               </div>
@@ -59,7 +58,7 @@ class UserProfileSection extends Component {
                     <h3>Deliveries</h3>
                   </div>
                   <div className="user-profile-section--rating-overall">
-                    <p>69</p>
+                    <p>{this.props.deliveryCount || "?"}</p>
                   </div>
                 </div>
               </div>
@@ -71,8 +70,14 @@ class UserProfileSection extends Component {
               <AccountInformationHeader title="Account Details" />
               <Divider />
               <div className="user-profile-section-details">
-                <AccountDetail title="Email" value="hnguy011@plattsburgh.edu" />
-                <AccountDetail title="Phone" value="xxx-xxxx-xxx" />
+                <AccountDetail
+                  title="Email"
+                  value={this.props.email || "Empty"}
+                />
+                <AccountDetail
+                  title="Phone"
+                  value={this.props.phone || "Empty"}
+                />
               </div>
               <AccountInformationHeader title="Addresses" />
               <Divider />
@@ -113,13 +118,34 @@ class UserProfileSection extends Component {
   }
 }
 
-function AccountInformationHeader(props) {
+UserProfileSection.propTypes = {
+  overallRating: PropTypes.number.isRequired,
+  userName: PropTypes.string.isRequired,
+  email: PropTypes.string.isRequired,
+  phone: PropTypes.string.isRequired,
+  deliveryCount: PropTypes.number.isRequired
+};
+
+var AccountInformationHeader = props => {
   return (
     <div className="user-profile-section--account-information-header">
       <h3>{props.title}</h3>
     </div>
   );
-}
+};
+
+var AccountDetail = props => {
+  return (
+    <div className="user-profile-section--detail">
+      <div className="user-profile-section--detail-title">
+        <p>{props.title}</p>
+      </div>
+      <div className="user-profile-section--detail-value">
+        <p>{props.value}</p>
+      </div>
+    </div>
+  );
+};
 
 const Divider = props => {
   return <div className="user-profile-section--divider" />;
