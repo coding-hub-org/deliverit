@@ -9,13 +9,13 @@ class App extends Component {
     return (
       <div className="App">
         {/* <Header /> */}
-        <UserProfileSection
-          overallRating={3.7}
-          deliveryCount={69}
-          userName={"Hung Nguyen"}
-          phone={"xxx-xxxx-xxx"}
-          email={"hnguy011@plattsburgh.edu"}
-        />
+//         <UserProfileSection
+//           overallRating={3.7}
+//           deliveryCount={69}
+//           userName={"Hung Nguyen"}
+//           phone={"xxx-xxxx-xxx"}
+//           email={"hnguy011@plattsburgh.edu"}
+//         />
         {/* <Footer /> */}
       </div>
     );
