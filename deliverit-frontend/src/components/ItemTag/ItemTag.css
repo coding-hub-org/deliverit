@@ -1,0 +1,17 @@
+.item-tag-component {
+  width: 100%;
+  background-color: #ffffff;
+  display: grid;
+  grid-template-columns: 2fr 4fr 2fr 2fr;
+  border-bottom: #eeeeee thin;
+  border-bottom-style: solid;
+  align-items: center;
+  justify-content: center;
+  color: #a3a6a9;
+  padding: 10px 0;
+}
+
+.item-tag-component__quantity > span {
+  border: 1px solid lightgray;
+  padding: 2px 7px;
+}

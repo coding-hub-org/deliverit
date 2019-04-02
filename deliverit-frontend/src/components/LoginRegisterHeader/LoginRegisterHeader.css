@@ -1,11 +1,9 @@
 .LoginRegisterHeader {
- 
   padding-top: 25px;
   padding-left: 25px;
- 
-}
-.Registerlogo {
-  height: 45px;
-  width: 45px;
 }
 
+.Registerlogo {
+  /* height: 45px; */
+  width: 60px;
+}

@@ -11,8 +11,9 @@ const RegisterCustomerSection = props => {
       <LoginRegisterHeader />
       <div className="register-customer-section--wrapper">
         <form action="">
+          <h1 className="register-customer-section--form_label">Register</h1>
+
           <div className="register-customer-section--form_grid">
-            <h1 className="register-customer-section--form_label">Register</h1>
             <div id="input-div">
               <label for="name">Full name</label>
               <br />
@@ -39,12 +40,13 @@ const RegisterCustomerSection = props => {
               <label for="cpassword">Confirm password</label> <br />
               <input type="password" name="cpassword" id="ConfirmPassword" />
             </div>
-            <button type="submit">REGISTER</button>
-
-            <p>
-              Have an account already? <a href="">Login here</a>
-            </p>
           </div>
+          <div className="register-customer-section--submit-button">
+            <button type="submit">REGISTER</button>
+          </div>
+          <p>
+            Have an account already? <a href="">Login here</a>
+          </p>
         </form>
 
         <img

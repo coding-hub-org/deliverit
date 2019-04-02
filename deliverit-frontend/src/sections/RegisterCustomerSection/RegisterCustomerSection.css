@@ -1,124 +1,103 @@
-/* @media only screen and (max-width: 768px) {
+.register-customer-section {
+  padding-top: 50px;
+  grid-column: 2;
+}
+
+.register-customer-section--wrapper {
+  display: grid;
+  grid-template-rows: auto;
+  grid-template-columns: 1fr 1fr;
+  grid-column-gap: 20px;
+  margin-top: 70px;
+}
+
+.register-customer-section--form_grid > div > input {
+  margin-top: 10px;
+  width: 100%;
+  padding: 5px 10px;
+  box-sizing: border-box;
+  height: 40px;
+  color: gray;
+}
+
+.register-customer-section--form_grid > div > label {
+  font-size: 16px;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+.register-customer-section--form_grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  justify-content: center;
+  padding: 20px 10px;
+  grid-column-gap: 30px;
+  grid-row-gap: 15px;
+}
+
+.register-customer-section--form_label {
+  font-size: 40px;
+  text-align: center;
+  grid-column: 1/3;
+  grid-row: 1/2;
+}
+
+.register-customer-section--form_grid input {
+  width: 230px;
+  height: 28px;
+  border: 2px solid #98dbe4;
+  border-radius: 5px;
+}
+
+.register-customer-section--form_grid input:focus {
+  border: solid rgb(222, 222, 227);
+  outline: none;
+  border-width: 1px;
+}
+
+.register-customer-section--form_grid #input-div {
+  display: inline-block;
+}
+.register-customer-section--submit-button {
+  text-align: center;
+}
+.register-customer-section--submit-button > button {
+  background: rgb(39, 176, 194);
+  color: white;
+  border-radius: 5px;
+  border: none;
+  padding: 15px 15px;
+  margin-top: 50px;
+  width: 200px;
+  outline: none;
+  transition: all 0.3s;
+}
+
+.register-customer-section--form_grid button:hover {
+  background: rgba(39, 176, 194, 0.808);
+}
+
+.register-customer-section--form_grid label {
+  font-size: 10px;
+  color: rgb(39, 176, 194);
+}
+.register-customer-section--form_grid p {
+  grid-column: 1/3;
+  text-align: center;
+}
+
+.register-customer-section--form_grid a {
+  text-decoration: none;
+  color: rgb(247, 181, 87);
+}
+.register-customer-section--form_logo {
+  width: 80%;
+  min-width: 350px;
+  align-self: center;
+  justify-self: center;
+}
+
+@media (max-width: 1250px) {
   .register-customer-section--wrapper {
-    display: grid;
-    grid-template-rows: auto auto;
-    grid-template-columns: auto auto;
-    grid-column-gap: 10px;
-    width: 100%;
-    justify-content: center;
-    border: solid black;
-  }
-  .register-customer-section--form_grid #input-div input {
-    width: 100px;
-    height: 28px;
-    border: solid rgb(39, 176, 194);
-    border-width: 1px;
-    border-radius: 5px;
-  }
-  .register-customer-section--form_grid {
-    display: grid;
-    grid-template-rows: auto auto auto auto auto auto;
-    grid-template-columns: auto auto;
-    justify-content: center;
-    grid-column-gap: 20px;
-    grid-row-gap: 15px;
-    grid-row: 2/3;
-
-    grid-column: 1/2;
-  }
-
-  .register-customer-section--form_label {
-    font-size: 40px;
-    text-align: center;
-    grid-column: 1/3;
-
-    grid-row: 1/2;
-  }
-  .register-customer-section--form_grid input {
-    width: 230px;
-    height: 28px;
-    border: solid rgb(39, 176, 194);
-    border-width: 1px;
-    border-radius: 5px;
-  }
-  .register-customer-section--form_logo {
-    width: 100%;
-    grid-row: 2/3;
-  }
-} */
-@media only screen and (min-width: 769px) {
-  .register-customer-section--wrapper {
-    display: grid;
-    grid-template-rows: auto;
-    grid-template-columns: 50% 50%;
-    grid-column-gap: 10px;
-    margin-top: 40px;
-  }
-  .register-customer-section--form_grid {
-    display: grid;
-    grid-template-rows: auto auto auto auto auto auto;
-    grid-template-columns: auto auto;
-    justify-content: center;
-    grid-column-gap: 20px;
-    grid-row-gap: 15px;
-  }
-
-  .register-customer-section--form_label {
-    font-size: 40px;
-    text-align: center;
-    grid-column: 1/3;
-    grid-row: 1/2;
-  }
-
-  .register-customer-section--form_grid input {
-    width: 230px;
-    height: 28px;
-    border: solid rgb(39, 176, 194);
-    border-width: 1px;
-    border-radius: 5px;
-  }
-
-  .register-customer-section--form_grid input:focus {
-    border: solid rgb(222, 222, 227);
-    outline: none;
-    border-width: 1px;
-  }
-
-  .register-customer-section--form_grid #input-div {
-    display: inline-block;
-  }
-  .register-customer-section--form_grid button {
-    grid-column: 1/3;
-    margin: auto;
-    height: 30px;
-    background: rgb(39, 176, 194);
-    color: white;
-    border-radius: 5px;
-    border: none;
-    margin-top: 45px;
-    width: 200px;
-    outline: none;
-    transition: all 0.3s;
-  }
-
-  .register-customer-section--form_grid button:hover {
-    background: rgba(39, 176, 194, 0.808);
-  }
-
-  .register-customer-section--form_grid label {
-    font-size: 10px;
-    color: rgb(39, 176, 194);
-  }
-  .register-customer-section--form_grid p {
-    grid-column: 1/3;
-    text-align: center;
-  }
-
-  .register-customer-section--form_grid a {
-    text-decoration: none;
-    color: rgb(247, 181, 87);
-  }
-  .register-customer-section--form_logo {
-    width: 70%;
   }
 }

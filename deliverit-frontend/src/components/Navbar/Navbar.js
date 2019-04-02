@@ -1,18 +1,24 @@
 import React from "react";
 import "./Navbar.css";
-import SearchBar from "../../components/SearchBar/SearchBar";
+import SearchBar from "../SearchBar/SearchBar";
 import Logo from "../../assets/logo.png";
 
 const Navbar = () => {
   return (
     <div className="navbar-component">
-      <div className="logo">
+      <div className="navbar-component--logo">
         <img src={Logo} alt="" />
       </div>
-      <div className="searchbar">
+      <div className="navbar-componet--searchbar">
         <SearchBar />
       </div>
-      <div className="navbar-links"> LINKS </div>
+      <div className="navbar-component--navbar-links">
+        <a href="#  ">LOGIN</a>
+        <a href="#">SIGNUP</a>
+        <a href="#">
+          <i class="fas fa-map-marker-alt" />
+        </a>
+      </div>
     </div>
   );
 };
