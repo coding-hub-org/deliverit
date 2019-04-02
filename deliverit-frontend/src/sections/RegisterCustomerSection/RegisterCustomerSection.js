@@ -3,6 +3,7 @@ import React from "react";
 import FormImage from "../../assets/register-img.svg";
 import "./RegisterCustomerSection.css";
 import LoginRegisterHeader from "../../components/LoginRegisterHeader/LoginRegisterHeader";
+import Footer from "../../components/Footer/Footer";
 
 const RegisterCustomerSection = props => {
   return (
