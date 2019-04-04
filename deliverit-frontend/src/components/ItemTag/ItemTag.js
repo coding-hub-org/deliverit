@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import "./ItemTag.css";
 
 //import a test image
-import testImage from "../../assets/logo.png";
+import testImage from "../../assets/logo.svg";
 // ~~~
 
 const ItemTag = props => {

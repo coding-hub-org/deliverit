@@ -1,7 +1,7 @@
 import React from "react";
 import "./Navbar.css";
 import SearchBar from "../SearchBar/SearchBar";
-import Logo from "../../assets/logo.png";
+import Logo from "../../assets/logo.svg";
 
 const Navbar = () => {
   return (
@@ -13,9 +13,9 @@ const Navbar = () => {
         <SearchBar />
       </div>
       <div className="navbar-component--navbar-links">
-        <a href="#  ">LOGIN</a>
-        <a href="#">SIGNUP</a>
-        <a href="#">
+        <a href="/">LOGIN</a>
+        <a href="/">SIGNUP</a>
+        <a href="/">
           <i class="fas fa-map-marker-alt" />
         </a>
       </div>

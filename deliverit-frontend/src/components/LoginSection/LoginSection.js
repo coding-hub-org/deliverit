@@ -6,7 +6,7 @@ class Login extends Component {
     return (
       <div className="LoginSection-section">
         <div className="LoginSection-section--loginWrapper__birdLogo">
-          <img src={require("../../assets/logo.png")} />
+          <img src={require("../../assets/logo.svg")} />
         </div>
         <div className="LoginSection-section--loginWrapper">
           <div className="LoginSection-section--loginWrapper__alignDiv ">

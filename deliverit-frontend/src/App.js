@@ -1,8 +1,5 @@
 import React, { Component } from "react";
 import "./App.css";
-import Header from "./components/Header/Header";
-import Footer from "./components/Footer/Footer";
-import UserProfileSection from "./sections/UserProfileSection/UserProfileSection";
 import {BrowserRouter, Switch, Route } from 'react-router-dom';
 
 import RegisterCustomerSection from './sections/RegisterCustomerSection/RegisterCustomerSection'
