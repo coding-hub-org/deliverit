@@ -1,0 +1,82 @@
+.login-section {
+    grid-column: 2/3;
+    display: flex;
+}
+
+.login-section .login-section--left form button {
+    border: none;
+    border-radius: 5px;
+    box-sizing: border-box;
+    width: 100%;
+    padding: 15px 0;
+    background-color: #17B0C3;
+    color: white;
+    -webkit-box-shadow: 0px 3px 6px 0px rgba(23,176,195,0.5);
+    -moz-box-shadow: 0px 3px 6px 0px rgba(23,176,195,0.5);
+    box-shadow: 0px 3px 6px 0px rgba(23,176,195,0.5);
+}
+
+.login-section .login-section--left {
+    flex-direction: column;
+    align-items: center;    
+    justify-content: space-around;
+}
+
+.login-section .login-section--left img {
+    align-self: flex-start;
+}
+
+.login-section .login-section--left .login-section--left__middle h1 {
+    text-align: center;
+    margin: 1.5em 0;
+}
+
+.login-section .login-section--left .login-section--left__middle h1 + p {
+    margin-bottom: 2.5em;
+}
+
+.login-section .login-section--left form p{
+    color: #17B0C3;
+    margin: 0 0 10px 0;
+    font-weight: 500;
+    text-align: left;
+}
+    
+.login-section .login-section--left .login-section--left__middle form + p {
+    margin-top: 2.5em;
+}
+.login-section .login-section--left p {
+    text-align: center;
+}
+
+.login-section .login-section--left form input {
+    margin-bottom: 30px;
+    border: #D4D4D4 1px solid;
+    box-sizing: border-box;
+    padding: 15px;
+    border-radius: 5px;
+    width: 100%;
+}
+
+.login-section .login-section--right, .login-section .login-section--left {
+    display: flex;
+    flex: 1;
+}
+
+.login-section .login-section--right img {
+    width: 95%;
+}
+
+.login-section .login-section--left a {
+    text-decoration: none;
+    color: #F8B64D;
+    font-weight: bold;
+}
+
+.login-section .login-section--left .login-section--left__middle a{
+    color: #F05B8A;
+} 
+
+.login-section .login-section--left form input:focus {
+    outline: #17B0C3 1px solid;
+}
