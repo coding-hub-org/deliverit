@@ -8,7 +8,9 @@
 }
 .login-section--wrapper {
     grid-column: 2/3;
+    box-sizing: border-box;
     display: flex;
+    padding: 50px 0;
 }
 
 .login-section .login-section--left form button {
@@ -27,11 +29,15 @@
 .login-section .login-section--left {
     flex-direction: column;
     align-items: center;    
-    justify-content: space-around;
+    justify-content: space-between;
 }
 
 .login-section .login-section--left img {
     align-self: flex-start;
+}
+
+.login-section .login-section--left .login-section--left__middle {
+    margin-bottom: 40px;
 }
 
 .login-section .login-section--left .login-section--left__middle h1 {
@@ -59,7 +65,7 @@
 
 .login-section .login-section--left form input {
     margin-bottom: 30px;
-    border: #D4D4D4 1px solid;
+    border: #D4D4D4 2px solid;
     box-sizing: border-box;
     padding: 15px;
     border-radius: 5px;
@@ -87,4 +93,16 @@
 
 .login-section .login-section--left form input:focus {
     outline: #17B0C3 1px solid;
+}
+
+@media only screen and (max-width: 1220px) {
+    .login-section .login-section--right {
+        display: none;
+    }
+}
+
+@media only screen and (max-width: 450px) {
+    .login-section .login-section--left p a {
+        display: block;
+    }
 }
