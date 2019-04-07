@@ -1,21 +1,21 @@
 import React, { Component } from "react";
 import "./App.css";
-import {BrowserRouter, Switch, Route } from 'react-router-dom';
-
-import RegisterCustomerSection from './sections/RegisterCustomerSection/RegisterCustomerSection'
+import {BrowserRouter as Router, Switch, Route } from 'react-router-dom';
+import * as ROUTES from './constants/routes';
 
 // Import sections
 import LoginSection from "./sections/LoginSection/LoginSection";
+import SignUpSection from "./sections/SignUpSection/SignUpSection";
 
 class App extends Component {
   render() {
     return (
-      <BrowserRouter>
+      <Router>
         <div className="App">
           <Switch>
             {/* Completed */}
-            <Route path="/login" component={LoginSection}/>
-            <Route path="/register" component={RegisterCustomerSection}/>
+            <Route path={ROUTES.SIGN_IN} component={LoginSection}/>
+            <Route path={ROUTES.SIGN_UP} component={SignUpSection}/>
           </Switch>
           {/* <Header /> */}
           {/* <UserProfileSection
@@ -27,7 +27,7 @@ class App extends Component {
           /> */}
           {/* <Footer /> */}
         </div>
-      </BrowserRouter>
+      </Router>
     );
   }
 }
