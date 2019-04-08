@@ -3,7 +3,10 @@ import { withFirebase } from '../../components/Firebase'
 import * as ROUTES from '../../constants/routes';
 import { Link, withRouter } from 'react-router-dom';
 import { compose } from 'recompose';
-
+import './SignUpSection.css';
+import Footer from '../../components/Footer/Footer';
+import RegisterImage from '../../assets/register-img.svg';
+import LogoImage from '../../assets/logo.svg';
 
 const INITIAL_STATE = {
     username: '',
@@ -14,10 +17,24 @@ const INITIAL_STATE = {
 };
 
 const SignUpSection = () => (
-  <div>
-    <h1>SignUp</h1>
-    <SignUpForm />
-  </div>
+    <div className="signup-section">
+        <div className="signup-section--wrapper">
+            <div className="signup-section--left">
+                <img src={LogoImage} alt="DeliverIt logo"/>
+                <div className="signup-section--left__middle">
+                    <h1>SIGN UP</h1>
+                    <p>Welcome back! Log in to start your delivery</p>
+                    <SignUpForm />
+                </div>
+            </div>
+            <div className="signup-section--right">
+                <div className="signup-section--right">
+                    <img src={RegisterImage} alt="Delivery guy img"/>  
+                </div>
+            </div>
+        </div>
+        <Footer/>
+    </div>
 );
 
 class SignUpFormBase extends Component {
@@ -63,6 +80,7 @@ class SignUpFormBase extends Component {
         
         return (
             <form onSubmit={this.onSubmit}>
+                <p>Username</p>
                 <input
                     name="username"
                     value={username}
@@ -70,6 +88,7 @@ class SignUpFormBase extends Component {
                     type="text"
                     placeholder="Full Name"
                 />
+                <p>Email</p>
                 <input
                     name="email"
                     value={email}
@@ -77,6 +96,7 @@ class SignUpFormBase extends Component {
                     type="text"
                     placeholder="Email Address"
                 />
+                <p>Password</p>
                 <input
                     name="passwordOne"
                     value={passwordOne}
@@ -84,6 +104,7 @@ class SignUpFormBase extends Component {
                     type="password"
                     placeholder="Password"
                 />
+                <p>Confirm Password</p>
                 <input
                     name="passwordTwo"
                     value={passwordTwo}
