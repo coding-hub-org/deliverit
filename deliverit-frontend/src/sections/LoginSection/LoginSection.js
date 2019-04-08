@@ -89,13 +89,13 @@ class SignInFormBase extends Component {
           onChange={this.onChange}
           type="password"
           placeholder="Password"
-        /><br/>
+        />
 
         <button disabled={isInvalid} type="submit">
           LOGIN
         </button>
 
-        {error && <p>{"Invalid email/password"}</p>}
+        {error && <p>{error.message}</p>}
       </form>
     );
   }
