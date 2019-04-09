@@ -12,6 +12,7 @@ import LoginSection from "./sections/LoginSection/LoginSection";
 import SignUpSection from "./sections/SignUpSection/SignUpSection";
 import Navigation from './components/Navigation/Navigation';
 import Navbar from './components/Navbar/Navbar';
+import HomeSection from './sections/HomeSection/HomeSection';
 
 
 const App = () => {
@@ -24,6 +25,9 @@ const App = () => {
               {/* Completed */}
               <Route path={ROUTES.SIGN_IN} component={LoginSection}/>
               <Route path={ROUTES.SIGN_UP} component={SignUpSection}/>
+              <Route path={ROUTES.HOME} component={HomeSection}/>
+
+              
             </Switch>
             {/* <Header /> */}
             {/* <UserProfileSection

@@ -1,7 +1,7 @@
 .home-section{
     display: grid;
     box-sizing: border-box;
-    grid-template-columns: minmax(10vw,1fr) minmax(0,var(--content-max-width)) minmax(10vw,1fr);
+    grid-template-columns: minmax(10vw,1fr) minmax(0,90rem) minmax(10vw,1fr);
 }
 
 .header-section {
