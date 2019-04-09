@@ -3,7 +3,6 @@ import StarIcon from "../../assets/star.svg";
 import TempPicture from "../../assets/register-img.svg";
 import "./UserProfileSection.css";
 import FlatButton from "../../components/FlatButton/FlatButton";
-import Header from "../../components/Header/Header";
 import Footer from "../../components/Footer/Footer";
 import PropTypes from "prop-types";
 
@@ -22,7 +21,6 @@ class UserProfileSection extends Component {
     return (
       <div className="user-profile">
         <div className="user-profile-navbar">
-          <Header />
         </div>
         <div className="user-profile-section">
           <div className="user-profile-section--title">

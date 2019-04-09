@@ -1,6 +1,5 @@
 import React, {Component} from 'react';
 import LoginImage from '../../assets/login-img.svg';
-import LogoImage from '../../assets/logo.svg';
 import Footer from '../../components/Footer/Footer';
 import { withRouter } from 'react-router-dom';
 import { withFirebase } from '../../components/Firebase';
@@ -15,7 +14,6 @@ const LoginSection = () => (
     <div className="login-section">
         <div className="login-section--wrapper">
             <div className="login-section--left">
-                <img src={LogoImage} alt="DeliverIt logo"/>
                 <div className="login-section--left__middle">
                     <h1>LOGIN</h1>
                     <p>Welcome back! Log in to start your delivery</p>
@@ -53,7 +51,7 @@ class SignInFormBase extends Component {
       .doSignInWithEmailAndPassword(email, password)
       .then(() => {
         this.setState({ ...INITIAL_STATE });
-        // this.props.history.push(ROUTES.HOME);
+        this.props.history.push(ROUTES.HOME);
       })
       .catch(error => {
         this.setState({ error });

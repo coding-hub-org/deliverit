@@ -1,9 +1,11 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-
+import './Navigation.css';
 import { AuthUserContext } from '../Session';
 import SignOutButton from '../SignOut/SignOut';
 import * as ROUTES from '../../constants/routes';
+import Logo from "../../assets/logo.svg";
+import SearchBar from '../SearchBar/SearchBar';
 
 const Navigation = () => (
     <div>
@@ -16,31 +18,33 @@ const Navigation = () => (
 );
 
 const NavigationAuth = () => (
-    <ul>
-        <li>
-        <Link to={ROUTES.LANDING}>Landing</Link>
-        </li>
-        <li>
+  <div className="navigation-component">
+    <div className="navigation-component--wrapper">
+      <img src={Logo} alt="" />
+      <SearchBar/>
+      <div className="navigation-component--wrapper__links">
+        <Link to={ROUTES.EXPLORE}>Landing</Link>
         <Link to={ROUTES.HOME}>Home</Link>
-        </li>
-        <li>
         <Link to={ROUTES.ACCOUNT}>Account</Link>
-        </li>
-        <li>
+        <a href="/">
+          <i className="fas fa-map-marker-alt" />
+        </a>
         <SignOutButton />
-        </li>
-    </ul>
+      </div>
+    </div>
+  </div>
 );
 
 const NavigationNonAuth = () => (
-    <ul>
-        <li>
-        <Link to={ROUTES.LANDING}>Landing</Link>
-        </li>
-        <li>
+  <div className="navigation-component">
+    <div className="navigation-component--wrapper">
+      <img src={Logo} alt="" />
+      <div className="navigation-component--wrapper__links">
+        <Link to={ROUTES.EXPLORE}>Landing</Link>
         <Link to={ROUTES.SIGN_IN}>Sign In</Link>
-        </li>
-    </ul>
+      </div>
+    </div>
+  </div>
 );
 
 export default Navigation;
