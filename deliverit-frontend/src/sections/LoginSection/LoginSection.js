@@ -15,7 +15,6 @@ const LoginSection = () => (
     <div className="login-section">
         <div className="login-section--wrapper">
             <div className="login-section--left">
-                <img src={LogoImage} alt="DeliverIt logo"/>
                 <div className="login-section--left__middle">
                     <h1>LOGIN</h1>
                     <p>Welcome back! Log in to start your delivery</p>

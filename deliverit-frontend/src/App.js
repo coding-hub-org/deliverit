@@ -11,6 +11,7 @@ import { withAuthentication } from './components/Session';
 import LoginSection from "./sections/LoginSection/LoginSection";
 import SignUpSection from "./sections/SignUpSection/SignUpSection";
 import Navigation from './components/Navigation/Navigation';
+import Navbar from './components/Navbar/Navbar';
 
 
 const App = () => {
@@ -32,8 +33,7 @@ const App = () => {
               phone={"xxx-xxxx-xxx"}
               email={"hnguy011@plattsburgh.edu"}
             /> */}
-            {/* <Footer /> */}
-          </div>
+            </div>
         </Router>
     );
   

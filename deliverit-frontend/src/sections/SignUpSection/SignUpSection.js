@@ -20,7 +20,6 @@ const SignUpSection = () => (
     <div className="signup-section">
         <div className="signup-section--wrapper">
             <div className="signup-section--left">
-                <img src={LogoImage} alt="DeliverIt logo"/>
                 <div className="signup-section--left__middle">
                     <h1>SIGN UP</h1>
                     <p>Welcome back! Log in to start your delivery</p>

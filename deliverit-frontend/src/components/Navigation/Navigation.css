@@ -1,0 +1,37 @@
+.navigation-component {
+    display: grid;
+    grid-template-columns: minmax(10vw,1fr) minmax(0,90rem) minmax(10vw,1fr);
+    background-color: #FBFBFC;
+}
+
+.navigation-component .navigation-component--wrapper {
+    grid-column: 2/3;
+    box-sizing: border-box;
+    display: flex;
+    padding: 30px 0;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.navigation-component .navigation-component--wrapper .navigation-component--wrapper__links a{
+    text-decoration: none;
+    margin-left: 20px;
+    text-transform: uppercase;
+    color: #F9B64D;
+    font-weight: 500;
+}
+
+.navigation-component .navigation-component--wrapper .navigation-component--wrapper__links button {
+    border: none;
+    border: none;
+    border-radius: 5px;
+    box-sizing: border-box;
+    padding: 15px;
+    text-transform: uppercase;
+    margin-left: 20px;
+    background-color: #17B0C3;
+    color: white;
+    -webkit-box-shadow: 0px 3px 6px 0px rgba(23,176,195,0.5);
+    -moz-box-shadow: 0px 3px 6px 0px rgba(23,176,195,0.5);
+    box-shadow: 0px 3px 6px 0px rgba(23,176,195,0.5);
+}
