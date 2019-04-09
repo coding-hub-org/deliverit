@@ -106,6 +106,8 @@ const SignInForm = compose(
   withFirebase,
 )(SignInFormBase);
 
+withRouter(withFirebase(SignInForm));
+
 export default LoginSection;
 
 export { SignInForm };
