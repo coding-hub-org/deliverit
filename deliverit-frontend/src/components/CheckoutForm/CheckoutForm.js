@@ -1,39 +1,58 @@
 import React, {Component} from 'react';
-import {CardElement, injectStripe} from 'react-stripe-elements';
+import {injectStripe, CardExpiryElement, CardCVCElement, CardNumberElement, PostalCodeElement} from 'react-stripe-elements';
+import './CheckoutForm.css';
 
-class CheckoutForm extends Component {
+class CheckoutForm extends React.Component {
     constructor(props) {
         super(props);
         this.state = {complete: false};
-        this.submit = this.submit.bind(this);
+        this.handleSubmit = this.handleSubmit.bind(this);
     }
 
-  async submit(ev) {
-    // User clicked submit
-    let {token} = await this.props.stripe.createToken({name: "Name"});
-    let response = await fetch("http://localhost:3000/charge", {
-        method: "POST",
-        headers: {"Content-Type": "text/plain"},
-        body: token.id
-    });
+    async handleSubmit(ev) {
+        ev.preventDefault();
+        // User clicked submit
+        let {token} = await this.props.stripe.createToken({name: "Name"});
+        let response = await fetch("http://localhost:3000/charge", {
+            method: "POST",
+            headers: {"Content-Type": "text/plain"},
+            body: token.id
+        });
 
-    if (response.ok) {
-        console.log("Purchase Complete!")
-        this.setState({complete: true});
+        if (response.ok) {
+            console.log("Purchase Complete!")
+            this.setState({complete: true});
+        }
+
     }
 
+    render() {
+        if (this.state.complete) return <h1>Purchase Complete</h1>;
+        return (
+            <div className="checkout-form-component">
+                <form onSubmit={this.handleSubmit}>
+                    <label>
+                    Card number
+                    <CardNumberElement/>
+                    </label>
+                    <label>
+                    Expiration date
+                    <CardExpiryElement />
+                    </label>
+                    <section className="checkout-form-component--details">
+                        <label>
+                        CVC
+                        <CardCVCElement/>
+                        </label>
+                        <label>
+                        Postal code
+                        <PostalCodeElement/>
+                        </label>
+                    </section>
+                    <button>PURCHASE</button>
+                </form>
+            </div>
+        );
+    }
   }
-
-  render() {
-    if (this.state.complete) return <h1>Purchase Complete</h1>;
-    return (
-      <div className="checkout">
-        <p>Would you like to complete the purchase?</p>
-        <CardElement />
-        <button onClick={this.submit}>Send</button>
-      </div>
-    );
-  }
-}
-
-export default injectStripe(CheckoutForm);
+  export default injectStripe(CheckoutForm);

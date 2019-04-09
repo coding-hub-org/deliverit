@@ -3,6 +3,7 @@ import {Elements, StripeProvider} from 'react-stripe-elements';
 
 import "./CheckoutSection.css"; 
 import CheckoutForm from "../../components/CheckoutForm/CheckoutForm";
+import Footer from "../../components/Footer/Footer";
 
 class CheckoutSection extends Component {
     constructor(props) {
@@ -39,11 +40,32 @@ class CheckoutSection extends Component {
     render() {
         return (
             <StripeProvider apiKey="pk_test_u1NsnlMIu7B2ps8EUDI4N2xS00AAT2yzuu">
-                <div>
-                    <h1>React Stripe Elements Example</h1>
-                    <Elements>
-                        <CheckoutForm/>
-                    </Elements>
+                <div className="checkout-section">
+                    <h1>Checkout</h1>
+                    <div className="checkout-section--wrapper">
+                        <div className="checkout-section--wrapper__left">
+                            <div className="checkout-section--wrapper__left--top">
+                                <h2>DELIVERY DETAILS</h2>
+                                <hr/>
+                                <p>Gaurav Jayasawal</p>
+                                <p>Mason Hall, Room 209</p>
+                                <p>Plattsburgh, NY 12019</p>
+                                <p>USA</p>
+                            </div>
+                            <div className="checkout-section--wrapper__left--bottom">
+                                <h2>PAYMENT DETAILS</h2>
+                                <hr/>
+                                <Elements>
+                                    <CheckoutForm/>
+                                </Elements>
+                            </div>
+                            
+                        </div>
+                        <div className="checkout-section--wrapper__right">
+
+                        </div>
+                    </div>
+                    <Footer/>
                 </div>
             </StripeProvider>
         )
