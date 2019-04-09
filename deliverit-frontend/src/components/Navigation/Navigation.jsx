@@ -26,9 +26,9 @@ const NavigationAuth = () => (
         <Link to={ROUTES.EXPLORE}>Landing</Link>
         <Link to={ROUTES.HOME}>Home</Link>
         <Link to={ROUTES.ACCOUNT}>Account</Link>
-        <a href="/">
-          <i className="fas fa-map-marker-alt" />
-        </a>
+        <Link to={ROUTES.CART}>
+          <i className="fas fa-shopping-cart"></i>
+        </Link>
         <SignOutButton />
       </div>
     </div>
