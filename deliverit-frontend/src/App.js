@@ -13,6 +13,7 @@ import SignUpSection from "./sections/SignUpSection/SignUpSection";
 import Navigation from './components/Navigation/Navigation';
 import HomeSection from './sections/HomeSection/HomeSection';
 import UserProfileSection from './sections/UserProfileSection/UserProfileSection';
+import CheckoutSection from './sections/CheckoutSection/CheckoutSection';
 
 
 const App = () => {
@@ -27,6 +28,7 @@ const App = () => {
               <Route path={ROUTES.SIGN_UP} component={SignUpSection}/>
               <Route path={ROUTES.HOME} component={HomeSection}/>
               <Route path={ROUTES.ACCOUNT} component={UserProfileSection}/>
+              <Route path={ROUTES.CART} component={CheckoutSection}/>
             </Switch>
             {/* <UserProfileSection
               overallRating={3.7}
