@@ -4,6 +4,7 @@ import {Elements, StripeProvider} from 'react-stripe-elements';
 import "./CheckoutSection.css"; 
 import CheckoutForm from "../../components/CheckoutForm/CheckoutForm";
 import Footer from "../../components/Footer/Footer";
+import { Helmet } from 'react-helmet'
 
 class CheckoutSection extends Component {
     constructor(props) {
@@ -41,6 +42,9 @@ class CheckoutSection extends Component {
         return (
             <StripeProvider apiKey="pk_test_u1NsnlMIu7B2ps8EUDI4N2xS00AAT2yzuu">
                 <div className="checkout-section">
+                <Helmet>
+                    <title>DeliverIt | Checkout</title>
+                </Helmet>
                     <h1>Checkout</h1>
                     <div className="checkout-section--wrapper">
                         <div className="checkout-section--wrapper__left">

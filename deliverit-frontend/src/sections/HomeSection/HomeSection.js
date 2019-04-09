@@ -5,6 +5,12 @@ import CardPlace from '../../components/CardPlace/CardPlace';
 import Footer from '../../components/Footer/Footer';
 
 class HomeSection extends React.Component {
+
+    // Pull data from Database here
+    componentDidMount() {
+
+    }
+
     render() {
         const testArr = [
             "Jade Oriental",
@@ -16,9 +22,9 @@ class HomeSection extends React.Component {
             "Texas Roadhouse"
         ];
 
-        const cardPlaceList = testArr.map(test => {
+        const cardPlaceList = testArr.map((test, idx) => {
             return (
-                <CardPlace place={test}/>
+                <CardPlace place={test} url={"123"} key={idx}/>
             )
         }); 
 
