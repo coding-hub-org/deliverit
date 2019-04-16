@@ -1,37 +1,59 @@
 .checkout-section {
-    background-color: #FBFBFC;
-    overflow: auto;
-    display: grid;
-    grid-template-columns: minmax(10vw,1fr) minmax(0,90rem) minmax(10vw,1fr);
+	background-color: #fbfbfc;
+	overflow: auto;
+	display: grid;
+	grid-template-columns: minmax(10vw, 1fr) minmax(0, 90rem) minmax(10vw, 1fr);
 }
 
 .checkout-section h1 {
-    grid-column: 2;
+	grid-column: 2;
 }
 
 .checkout-section .checkout-section--wrapper {
-    grid-column: 2;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-column-gap: 40px;
-    margin-bottom: 40px;
+	grid-column: 2;
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	grid-column-gap: 40px;
+	margin-bottom: 40px;
 }
 
-.checkout-section .checkout-section--wrapper .checkout-section--wrapper__left--bottom h2, 
-.checkout-section .checkout-section--wrapper .checkout-section--wrapper__left--top h2{
-    color: #8C9194;
+.checkout-section
+	.checkout-section--wrapper
+	.checkout-section--wrapper__left--bottom
+	h2,
+.checkout-section
+	.checkout-section--wrapper
+	.checkout-section--wrapper__left--top
+	h2,
+.checkout-section
+	.checkout-section--wrapper
+	.checkout-section--wrapper__right
+	h2 {
+	color: #8c9194;
 }
 
-.checkout-section .checkout-section--wrapper .checkout-section--wrapper__left--bottom hr,
-.checkout-section .checkout-section--wrapper .checkout-section--wrapper__left--top hr {
-    border: 1px solid #F0F0F0;
-    margin-top: 0;
-    margin-bottom: 30px;
+.checkout-section
+	.checkout-section--wrapper
+	.checkout-section--wrapper__left--bottom
+	hr,
+.checkout-section
+	.checkout-section--wrapper
+	.checkout-section--wrapper__left--top
+	hr,
+.checkout-section
+	.checkout-section--wrapper
+	.checkout-section--wrapper__right
+	hr {
+	border: 1px solid #f0f0f0;
+	margin-top: 0;
+	margin-bottom: 30px;
 }
 
-.checkout-section .checkout-section--wrapper .checkout-section--wrapper__left--top p {
-    color: black;
-    font-weight: 500;
-    margin: 0;
+.checkout-section
+	.checkout-section--wrapper
+	.checkout-section--wrapper__left--top
+	p {
+	color: black;
+	font-weight: 500;
+	margin: 0;
 }
-
