@@ -13,19 +13,15 @@ class HomeSection extends React.Component {
 		};
 	}
 
-	componentDidMount = () => {
-		fetch("http://127.0.0.1:3000/images")
-			.then(response => response.json())
-			.then(data => {
-				// console.log(data);
-				this.setState({ store: data });
-				// console.log(this.state);
-				// this.state.store.map(test => {
-				//   console.log("life is:", test.storeName);
-				// });
-			});
-	};
-
+ 
+  componentDidMount = () => {
+    fetch("http://127.0.0.1:3000/images")
+      .then(response => response.json())
+      .then(data => {
+        this.setState({ store: data });
+      });
+  };
+ 
 	render() {
 		const cardPlaceList = this.state.store.map(test => {
 			return (
