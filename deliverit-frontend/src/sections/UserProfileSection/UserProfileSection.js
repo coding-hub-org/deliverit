@@ -5,8 +5,16 @@ import "./UserProfileSection.css";
 import FlatButton from "../../components/FlatButton/FlatButton";
 import Footer from "../../components/Footer/Footer";
 import PropTypes from "prop-types";
+import { AuthUserContext } from "../../components/Session";
 
 class UserProfileSection extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      user: []
+    };
+  }
+
   generateStars = () => {
     let stars = [];
     for (var i = 0; i < Math.round(this.props.overallRating || 0); ++i) {
@@ -17,11 +25,29 @@ class UserProfileSection extends Component {
     return stars;
   };
 
+  componentDidMount = () => {
+    fetch("http://127.0.0.1:3000/users?email=jgaurav6@gmail.com", {
+      method: "GET",
+      headers: {
+        Accept: "application/json",
+        "Content-Type": "application/json"
+      }
+    })
+      .then(res => {
+        return res.json();
+        // console.log(res.json());
+      })
+      .then(myJson => {
+        this.setState({ user: myJson });
+        // console.log(JSON.stringify(myJson));
+        console.log(this.state);
+      });
+  };
+
   render() {
     return (
       <div className="user-profile">
-        <div className="user-profile-navbar">
-        </div>
+        <div className="user-profile-navbar" />
         <div className="user-profile-section">
           <div className="user-profile-section--title">
             <h1>Account</h1>
@@ -63,18 +89,18 @@ class UserProfileSection extends Component {
             </div>
             <div className="user-profile-section--account-information">
               <div className="user-profile-section--name">
-                <h2>Hung Nguyen</h2>
+                <h2>{this.state.user.fullName}</h2>
               </div>
               <AccountInformationHeader title="Account Details" />
               <Divider />
               <div className="user-profile-section-details">
                 <AccountDetail
                   title="Email"
-                  value={this.props.email || "Empty"}
+                  value={this.state.user.email || "Empty"}
                 />
                 <AccountDetail
                   title="Phone"
-                  value={this.props.phone || "Empty"}
+                  value={this.state.user.phoneNum || "Empty"}
                 />
               </div>
               <AccountInformationHeader title="Addresses" />
