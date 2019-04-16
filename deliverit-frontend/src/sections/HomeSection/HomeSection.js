@@ -3,6 +3,7 @@ import React from "react";
 import "./HomeSection.css";
 import CardPlace from "../../components/CardPlace/CardPlace";
 import Footer from "../../components/Footer/Footer";
+import { Link } from "react-router-dom";
 
 class HomeSection extends React.Component {
 	constructor(props) {
@@ -27,7 +28,11 @@ class HomeSection extends React.Component {
 
 	render() {
 		const cardPlaceList = this.state.store.map(test => {
-			return <CardPlace place={test} />;
+			return (
+				<Link to={"/details/123"}>
+					<CardPlace place={test} />
+				</Link>
+			);
 		});
 
 		return (
