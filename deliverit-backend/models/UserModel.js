@@ -2,7 +2,6 @@ class UserModel {
   constructor(
     fullName,
     email,
-    clientId,
     phoneNum,
     imageUrl = "",
     cancelCount = 0,
@@ -12,7 +11,6 @@ class UserModel {
   ) {
     this.fullName = fullName;
     this.email = email;
-    this.clientId = clientId;
     this.phoneNum = phoneNum;
     this.imageUrl = imageUrl;
     this.cancelCount = cancelCount;
