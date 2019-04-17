@@ -40,7 +40,7 @@ class DetailsSection extends React.Component {
 			<div className="details-section">
 				<h1>Jade Oriental</h1>
 				<div className="details-section--wrapper">
-					<h1>GONZALO</h1>
+					<h1>APPETIZERS</h1>
 					{this.state.appetizers.map(appetizer => (
 						<DetailCard menu={appetizer} />
 					))}
