@@ -3,11 +3,23 @@ import StarIcon from "../../assets/star.svg";
 import TempPicture from "../../assets/register-img.svg";
 import "./UserProfileSection.css";
 import FlatButton from "../../components/FlatButton/FlatButton";
-import Header from "../../components/Header/Header";
 import Footer from "../../components/Footer/Footer";
 import PropTypes from "prop-types";
+import { Image } from "cloudinary-react";
 
 class UserProfileSection extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      user: []
+    };
+  }
+
+  handleClick = e => {
+    e.preventDefault();
+    console.log("clicked");
+  };
+
   generateStars = () => {
     let stars = [];
     for (var i = 0; i < Math.round(this.props.overallRating || 0); ++i) {
@@ -18,23 +30,51 @@ class UserProfileSection extends Component {
     return stars;
   };
 
+  componentDidMount = () => {
+    fetch("http://127.0.0.1:3000/users?email=jgaurav6@gmail.com", {
+      method: "GET",
+      headers: {
+        Accept: "application/json",
+        "Content-Type": "application/json"
+      }
+    })
+      .then(res => {
+        return res.json();
+        // console.log(res.json());
+      })
+      .then(myJson => {
+        this.setState({ user: myJson });
+        // console.log(JSON.stringify(myJson));
+        console.log(this.state);
+      });
+  };
+
   render() {
+    // console.log(this.state.user.imgUrl);
+    // let image =
+    //   this.state.user.imgUrl === ""
+    //     ? TempPicture
+    //     : require(this.state.user.imgUrl);
     return (
       <div className="user-profile">
-        <div className="user-profile-navbar">
-          <Header />
-        </div>
+        <div className="user-profile-navbar" />
         <div className="user-profile-section">
           <div className="user-profile-section--title">
             <h1>Account</h1>
+            {/* <h1>{process.}</h1> */}
           </div>
           <div className="user-profile-section--photo">
             <img
               className="user-profile-section--photo-frame"
-              src={TempPicture}
+              src={
+                this.state.user.imageURL === "" ||
+                this.state.user.imageURL === undefined
+                  ? TempPicture
+                  : this.state.user.imageURL
+              }
             />
             <div className="user-profile-section-button--wrapper">
-              <FlatButton title="Change Photo" />
+              <FlatButton onClick={this.handleClick} title="Change Photo" />
             </div>
           </div>
           <div className="user-profile-section--content">
@@ -45,7 +85,11 @@ class UserProfileSection extends Component {
                 </div>
                 <div className="user-profile-section--rating-overall-wrapper">
                   <div className="user-profile-section--rating-overall">
-                    <p>{this.props.overallRating || "?"}</p>
+                    <p>
+                      {this.state.user.ratings === 0
+                        ? "N/A"
+                        : this.state.user.ratings}
+                    </p>
                   </div>
                   <div className="user-profile-section--rating-stars">
                     {this.generateStars()}
@@ -58,25 +102,25 @@ class UserProfileSection extends Component {
                     <h3>Deliveries</h3>
                   </div>
                   <div className="user-profile-section--rating-overall">
-                    <p>{this.props.deliveryCount || "?"}</p>
+                    <p>{this.state.user.delivery}</p>
                   </div>
                 </div>
               </div>
             </div>
             <div className="user-profile-section--account-information">
               <div className="user-profile-section--name">
-                <h2>Hung Nguyen</h2>
+                <h2>{this.state.user.fullName}</h2>
               </div>
               <AccountInformationHeader title="Account Details" />
               <Divider />
               <div className="user-profile-section-details">
                 <AccountDetail
                   title="Email"
-                  value={this.props.email || "Empty"}
+                  value={this.state.user.email || "Empty"}
                 />
                 <AccountDetail
                   title="Phone"
-                  value={this.props.phone || "Empty"}
+                  value={this.state.user.phoneNum || "Empty"}
                 />
               </div>
               <AccountInformationHeader title="Addresses" />

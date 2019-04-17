@@ -1,0 +1,20 @@
+.detail-card-component {
+	background-color: white;
+	border: 1px solid #d9d9d9;
+	color: #707070;
+	box-sizing: border-box;
+	padding: 20px 30px;
+}
+
+.details-section--wrapper h1 {
+	grid-column: 1/4;
+}
+.detail-card-component .detail-card-component--title,
+.detail-card-component .detail-card-component--price {
+	font-weight: bold;
+}
+
+.detail-card-component .detail-card-component--price {
+	color: #00c7b9;
+	text-align: right;
+}
