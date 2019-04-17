@@ -45,6 +45,11 @@ class UserProfileSection extends Component {
   };
 
   render() {
+    // console.log(this.state.user.imgUrl);
+    // let image =
+    //   this.state.user.imgUrl === ""
+    //     ? TempPicture
+    //     : require(this.state.user.imgUrl);
     return (
       <div className="user-profile">
         <div className="user-profile-navbar" />
@@ -55,7 +60,12 @@ class UserProfileSection extends Component {
           <div className="user-profile-section--photo">
             <img
               className="user-profile-section--photo-frame"
-              src={TempPicture}
+              src={
+                this.state.user.imageURL === "" ||
+                this.state.user.imageURL === undefined
+                  ? TempPicture
+                  : this.state.user.imageURL
+              }
             />
             <div className="user-profile-section-button--wrapper">
               <FlatButton title="Change Photo" />
@@ -69,7 +79,11 @@ class UserProfileSection extends Component {
                 </div>
                 <div className="user-profile-section--rating-overall-wrapper">
                   <div className="user-profile-section--rating-overall">
-                    <p>{this.props.overallRating || "?"}</p>
+                    <p>
+                      {this.state.user.ratings === 0
+                        ? "N/A"
+                        : this.state.user.ratings}
+                    </p>
                   </div>
                   <div className="user-profile-section--rating-stars">
                     {this.generateStars()}
@@ -82,7 +96,7 @@ class UserProfileSection extends Component {
                     <h3>Deliveries</h3>
                   </div>
                   <div className="user-profile-section--rating-overall">
-                    <p>{this.props.deliveryCount || "?"}</p>
+                    <p>{this.state.user.delivery}</p>
                   </div>
                 </div>
               </div>

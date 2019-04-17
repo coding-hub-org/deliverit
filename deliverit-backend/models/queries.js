@@ -7,13 +7,17 @@ newUserQuery = (email, fullName, clientId, phoneNum) => {
     "','" +
     clientId +
     "'," +
-    "'http://denrakaev.com/wp-content/uploads/2015/03/no-image.png'" +
+    "''" +
     "," +
     phoneNum +
     "," +
     0 +
     ", " +
     true +
+    "," +
+    0 +
+    "," +
+    0.0 +
     ");";
 
   return a;

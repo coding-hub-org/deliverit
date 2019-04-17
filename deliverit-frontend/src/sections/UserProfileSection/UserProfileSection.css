@@ -45,14 +45,14 @@
 
 .user-profile-section--photo-frame {
   margin: 0 auto;
-  width: 80vw;
-  height: 80vw;
+  width: 50vw;
+  height: 50vw;
 
   background-color: lightcoral;
 }
 
 .user-profile-section--content {
-  padding: 0 10vw;
+  padding: 0 5vw;
 }
 
 .user-profile-section--rating {
@@ -153,7 +153,7 @@
   grid-area: value;
 }
 
-@media only screen and (min-width: 1024px) {
+@media only screen and (min-width: 700px) {
   .user-profile {
     display: flex;
     flex-direction: column;
@@ -176,7 +176,7 @@
   }
 
   .user-profile-section--content {
-    /* padding-left: 5vw; */
+    /* padding-left: 5vw;x1 */
   }
 
   .user-profile-section--title {
