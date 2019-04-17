@@ -1,7 +1,8 @@
 const express = require("express");
 const router = express.Router();
-const db = require("../models/database");
-const queries = require("../models/queries");
+const db = require("../database/database");
+const queries = require("../database/queries");
+const User = require("../models/UserModel");
 
 /* GET users listing. */
 router.get("/", function(req, res, next) {
@@ -18,17 +19,15 @@ router.get("/", function(req, res, next) {
 
 /* Stores a new user data in the database */
 router.post("/", function(req, res, next) {
-  console.log(req.body);
-  let query;
+  let newUser = new User(
+    req.body.fullName,
+    req.body.email,
+    req.body.clientId,
+    req.body.phoneNum
+  );
+
   async function queryCall() {
-    query = await db.runQuery(
-      queries.newUser(
-        req.body.email,
-        req.body.fullName,
-        req.body.clientId,
-        req.body.phoneNum
-      )
-    );
+    let query = await db.runQuery(queries.newUser(newUser));
     return query;
   }
 

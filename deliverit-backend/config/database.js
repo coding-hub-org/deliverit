@@ -1,6 +1,0 @@
-module.exports = {
-  host: "35.222.174.219",
-  user: "codinghub",
-  password: "Plattsburgh#1",
-  database: "deliveritdb"
-};
