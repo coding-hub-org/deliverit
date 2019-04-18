@@ -20,7 +20,7 @@ class UserProfileSection extends Component {
     };
   }
 
-  close = e => {
+  closeDialog = e => {
     console.log("Closed");
     this.setState({ dialogOpen: false });
     this.fetchData();
@@ -78,7 +78,7 @@ class UserProfileSection extends Component {
         <div className="user-profile-navbar" />
         {this.state.dialogOpen ? (
           <DialogBox
-            close={this.close}
+            close={this.closeDialog}
             function="UPDATE"
             title="Update Address"
           />
@@ -138,7 +138,7 @@ class UserProfileSection extends Component {
                 <h2>{this.state.user.fullName}</h2>
               </div>
               <AccountInformationHeader title="Account Details" />
-              <Divider />
+              <hr />
               <div className="user-profile-section-details">
                 <AccountDetail
                   title="Email"
@@ -150,7 +150,7 @@ class UserProfileSection extends Component {
                 />
               </div>
               <AccountInformationHeader title="Addresses" />
-              <Divider />
+              <hr />
               <div />
               {this.state.user.addresses === undefined ? (
                 <p />
@@ -172,13 +172,13 @@ class UserProfileSection extends Component {
                 )}
               </div>
               <AccountInformationHeader title="Payments" />
-              <Divider />
+              <hr />
               <div className="user-profile-section-button--wrapper">
                 <FlatButton className="align-left" title="Add Payment Method" />
               </div>
               <div className="user-profile-section-payment" />
               <AccountInformationHeader title="Password" />
-              <Divider />
+              <hr />
               <div className="user-profile-section--password">
                 <input
                   className="user-profile-section--password-input"
@@ -232,10 +232,6 @@ var AccountDetail = props => {
       </div>
     </div>
   );
-};
-
-const Divider = props => {
-  return <div className="user-profile-section--divider" />;
 };
 
 export default UserProfileSection;

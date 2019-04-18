@@ -14,6 +14,11 @@
   outline: none;
 }
 
+hr {
+  border: 0;
+  border-top: solid #dedede 1px;
+}
+
 .user-profile-section {
   flex-grow: 1;
 
