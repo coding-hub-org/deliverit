@@ -6,14 +6,25 @@ import FlatButton from "../../components/FlatButton/FlatButton";
 import Footer from "../../components/Footer/Footer";
 import PropTypes from "prop-types";
 import { Image } from "cloudinary-react";
+import DialogBox from "../../components/DialogBox/DialogBox";
 
 class UserProfileSection extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      user: []
+      user: [],
+      dialogOpen: false,
+      disableScrollStyle: {
+        overflowY: "hidden"
+      }
     };
   }
+
+  close = e => {
+    console.log("Closed");
+    this.setState({ dialogOpen: false });
+    this.fetchData();
+  };
 
   handleClick = e => {
     e.preventDefault();
@@ -30,7 +41,16 @@ class UserProfileSection extends Component {
     return stars;
   };
 
+  handleAddressUpdate = e => {
+    e.preventDefault();
+    this.setState({ dialogOpen: true });
+  };
+
   componentDidMount = () => {
+    this.fetchData();
+  };
+
+  fetchData() {
     fetch("http://127.0.0.1:3000/users?email=jgaurav6@gmail.com", {
       method: "GET",
       headers: {
@@ -47,21 +67,27 @@ class UserProfileSection extends Component {
         // console.log(JSON.stringify(myJson));
         console.log(this.state);
       });
-  };
+  }
 
   render() {
-    // console.log(this.state.user.imgUrl);
-    // let image =
-    //   this.state.user.imgUrl === ""
-    //     ? TempPicture
-    //     : require(this.state.user.imgUrl);
     return (
-      <div className="user-profile">
+      <div
+        className="user-profile"
+        style={this.state.dialogOpen ? this.state.disableScrollStyle : {}}
+      >
         <div className="user-profile-navbar" />
+        {this.state.dialogOpen ? (
+          <DialogBox
+            close={this.close}
+            function="UPDATE"
+            title="Update Address"
+          />
+        ) : (
+          <span />
+        )}
         <div className="user-profile-section">
           <div className="user-profile-section--title">
             <h1>Account</h1>
-            {/* <h1>{process.}</h1> */}
           </div>
           <div className="user-profile-section--photo">
             <img
@@ -125,8 +151,25 @@ class UserProfileSection extends Component {
               </div>
               <AccountInformationHeader title="Addresses" />
               <Divider />
+              <div />
+              {this.state.user.addresses === undefined ? (
+                <p />
+              ) : (
+                this.state.user.addresses.map(addr => (
+                  <AccountDetail title="Address" value={addr.address} />
+                ))
+              )}
               <div className="user-profile-section-button--wrapper">
-                <FlatButton className="align-left" title="Add Address" />
+                {this.state.user.addresses === undefined ||
+                this.state.user.addresses.length === 0 ? (
+                  <FlatButton className="align-left" title="Add Address" />
+                ) : (
+                  <FlatButton
+                    onClick={this.handleAddressUpdate}
+                    className="align-left"
+                    title="Update Address"
+                  />
+                )}
               </div>
               <AccountInformationHeader title="Payments" />
               <Divider />

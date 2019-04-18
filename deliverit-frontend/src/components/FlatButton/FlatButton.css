@@ -3,6 +3,7 @@
   margin: 0;
   width: 100%;
   min-width: 190px;
+  height: 50px;
   max-width: 250px;
   border-radius: 10px;
   color: white;
@@ -13,4 +14,8 @@
   -webkit-box-shadow: 0px 3px 6px 0px rgba(23, 176, 195, 0.5);
   -moz-box-shadow: 0px 3px 6px 0px rgba(23, 176, 195, 0.5);
   box-shadow: 0px 3px 6px 0px rgba(23, 176, 195, 0.5);
+}
+
+.flat-button > p {
+  margin: 0;
 }

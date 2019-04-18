@@ -26,10 +26,17 @@ const getUserAddresses = email => {
   return `SELECT address FROM AddressTable WHERE email = '${email}'`;
 };
 
+const updateUserAddress = UserAddressModel => {
+  return `UPDATE AddressTable SET address = '${
+    UserAddressModel.address
+  }' WHERE email = '${UserAddressModel.email}';`;
+};
+
 module.exports = {
   storeQuery: getAllStores,
   newUser: newUserQuery,
   getUserInfo: getUserInfo,
   newAddress: newUserAddress,
-  getUserAddresses: getUserAddresses
+  getUserAddresses: getUserAddresses,
+  updateAddress: updateUserAddress
 };
