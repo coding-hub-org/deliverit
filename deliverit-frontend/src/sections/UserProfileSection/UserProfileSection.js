@@ -7,8 +7,19 @@ import Footer from "../../components/Footer/Footer";
 import PropTypes from "prop-types";
 import { Image } from "cloudinary-react";
 import DialogBox from "../../components/DialogBox/DialogBox";
+import { AuthUserContext, withAuthentication } from "../../components/Session";
 
-class UserProfileSection extends Component {
+const UserProfileSection = () => (
+  <div>
+    <AuthUserContext.Consumer>
+      {authUser =>
+        authUser ? <UserProfileSectionContent user={authUser} /> : null
+      }
+    </AuthUserContext.Consumer>
+  </div>
+);
+
+class UserProfileSectionContent extends Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -51,7 +62,7 @@ class UserProfileSection extends Component {
   };
 
   fetchData() {
-    fetch("http://127.0.0.1:3000/users?email=jgaurav6@gmail.com", {
+    fetch(`http://127.0.0.1:3000/users?email=${this.props.user.email}`, {
       method: "GET",
       headers: {
         Accept: "application/json",
@@ -81,6 +92,7 @@ class UserProfileSection extends Component {
             close={this.closeDialog}
             function="UPDATE"
             title="Update Address"
+            email={this.props.user.email}
           />
         ) : (
           <span />
@@ -232,6 +244,10 @@ var AccountDetail = props => {
       </div>
     </div>
   );
+};
+
+const Divider = props => {
+  return <div className="user-profile-section--divider" />;
 };
 
 export default UserProfileSection;

@@ -24,7 +24,7 @@ const App = () => {
 					{/* Completed */}
 					<Route path={ROUTES.SIGN_IN} component={LoginSection} />
 					<Route path={ROUTES.SIGN_UP} component={SignUpSection} />
-					<Route path={ROUTES.HOME} component={HomeSection} />{" "}
+					<Route path={ROUTES.HOME} component={HomeSection} />
 					<Route path={ROUTES.DETAILS + "/:id"} component={DetailsSection} />
 					<Route path={ROUTES.ACCOUNT} component={UserProfileSection} />
 					<Route path={ROUTES.CART} component={CheckoutSection} />

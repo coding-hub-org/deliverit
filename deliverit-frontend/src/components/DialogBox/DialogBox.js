@@ -25,7 +25,7 @@ class DialogBox extends Component {
           "Content-Type": "application/json"
         },
         body: JSON.stringify({
-          email: "jgaurav6@gmail.com",
+          email: this.props.email,
           newAddress: this.state.address
         })
       });
