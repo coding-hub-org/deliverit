@@ -32,14 +32,12 @@ class UserProfileSectionContent extends Component {
   }
 
   closeDialog = e => {
-    console.log("Closed");
     this.setState({ dialogOpen: false });
     this.fetchData();
   };
 
   handleClick = e => {
     e.preventDefault();
-    console.log("clicked");
   };
 
   generateStars = () => {
@@ -71,12 +69,9 @@ class UserProfileSectionContent extends Component {
     })
       .then(res => {
         return res.json();
-        // console.log(res.json());
       })
       .then(myJson => {
         this.setState({ user: myJson });
-        // console.log(JSON.stringify(myJson));
-        console.log(this.state);
       });
   }
 
