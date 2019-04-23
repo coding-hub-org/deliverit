@@ -58,7 +58,7 @@ class CartPageSection extends Component {
     });
   }
 
-  handleSubmitForm = e => {
+  handleSubmitForm = e  => {
     //Do the sumbit here
   };
   handleChangeNumber = () => {};

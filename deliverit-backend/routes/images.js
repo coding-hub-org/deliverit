@@ -1,8 +1,9 @@
 const express = require("express");
 const router = express.Router();
-const db = require("../models/database");
-const queries = require("../models/queries");
+const db = require("../database/database");
+const queries = require("../database/queries");
 
+// This method returns all the list of stores as json
 router.get("/", function(req, res, next) {
   let query;
   async function queryCall() {

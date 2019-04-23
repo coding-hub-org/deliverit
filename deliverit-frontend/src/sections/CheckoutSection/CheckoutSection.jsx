@@ -51,6 +51,32 @@ export class CheckoutProvider extends Component {
 }
 
 class CheckoutSection extends Component {
+    constructor(props) {
+      super(props);
+      this.state = {
+          userDetails: [];
+      }
+    }
+    
+    componentDidMount = () => {
+    fetch("http://127.0.0.1:3000/users?email=jgaurav6@gmail.com", {
+      method: "GET",
+      headers: {
+        Accept: "application/json",
+        "Content-Type": "application/json"
+      }
+    })
+      .then(res => {
+        return res.json();
+        // console.log(res.json());
+      })
+      .then(userDetails => {
+        this.setState({ userDetails });
+        // console.log(JSON.stringify(myJson));
+        console.log(this.state);
+      });
+  };
+    
 	render() {
 		return (
 			<CheckoutContext.Consumer>
@@ -66,10 +92,22 @@ class CheckoutSection extends Component {
 									<div className="checkout-section--wrapper__left--top">
 										<h2>DELIVERY DETAILS</h2>
 										<hr />
-										<p>Gaurav Jayasawal</p>
-										<p>Mason Hall, Room 209</p>
-										<p>Plattsburgh, NY 12019</p>
-										<p>USA</p>
+                    {this.state.userDetails.fullName === undefined
+                  ? ""
+                  : this.state.userDetails.addresses.map(addr => (
+                      <div>
+                        <p>
+                          {this.state.userDetails.fullName === undefined
+                            ? ""
+                            : this.state.userDetails.fullName}
+                        </p>
+                        <p>
+                          {addr.address}
+                          <br />
+                          <br />
+                        </p>
+                      </div>
+                    ))}
 									</div>
 									<div className="checkout-section--wrapper__left--bottom">
 										<h2>PAYMENT DETAILS</h2>
