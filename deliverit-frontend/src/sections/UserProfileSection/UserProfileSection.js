@@ -5,7 +5,7 @@ import "./UserProfileSection.css";
 import FlatButton from "../../components/FlatButton/FlatButton";
 import Footer from "../../components/Footer/Footer";
 import PropTypes from "prop-types";
-import { AuthUserContext, withAuthentication } from "../../components/Session";
+import { AuthUserContext } from "../../components/Session";
 
 const UserProfileSection = () => (
 	<div>

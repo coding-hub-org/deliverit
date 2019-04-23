@@ -35,14 +35,15 @@ class DetailsSection extends React.Component {
 			]
 		};
 	}
+
 	render() {
 		return (
 			<div className="details-section">
-				<h1>Jade Oriental</h1>
+				<h1>TEXAS</h1>
 				<div className="details-section--wrapper">
 					<h1>APPETIZERS</h1>
-					{this.state.appetizers.map(appetizer => (
-						<DetailCard menu={appetizer} />
+					{this.state.appetizers.map((appetizer, idx) => (
+						<DetailCard key={idx} menu={appetizer} />
 					))}
 				</div>
 				<Footer />
