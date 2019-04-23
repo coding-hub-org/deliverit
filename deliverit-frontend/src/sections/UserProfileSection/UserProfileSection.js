@@ -5,9 +5,9 @@ import "./UserProfileSection.css";
 import FlatButton from "../../components/FlatButton/FlatButton";
 import Footer from "../../components/Footer/Footer";
 import PropTypes from "prop-types";
+import { AuthUserContext } from "../../components/Session";
 import { Image } from "cloudinary-react";
 import DialogBox from "../../components/DialogBox/DialogBox";
-import { AuthUserContext, withAuthentication } from "../../components/Session";
 
 const UserProfileSection = () => (
   <div>

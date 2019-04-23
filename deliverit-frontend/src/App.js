@@ -14,30 +14,34 @@ import HomeSection from "./sections/HomeSection/HomeSection";
 import UserProfileSection from "./sections/UserProfileSection/UserProfileSection";
 import CheckoutSection from "./sections/CheckoutSection/CheckoutSection";
 import DetailsSection from "./sections/DetailsSection/DetailsSection";
+import { CheckoutProvider } from "./sections/CheckoutSection/CheckoutSection";
 
 const App = () => {
+	// console.log(this.props);
 	return (
 		<Router>
-			<div className="App">
-				<Navigation />
-				<Switch>
-					{/* Completed */}
-					<Route path={ROUTES.SIGN_IN} component={LoginSection} />
-					<Route path={ROUTES.SIGN_UP} component={SignUpSection} />
-					<Route path={ROUTES.HOME} component={HomeSection} />
-					<Route path={ROUTES.DETAILS + "/:id"} component={DetailsSection} />
-					<Route path={ROUTES.ACCOUNT} component={UserProfileSection} />
-					<Route path={ROUTES.CART} component={CheckoutSection} />
-					{/* <Route path={ROUTES.DETAILS} component={DetailsSection} /> */}
-				</Switch>
-				{/* <UserProfileSection
+			<CheckoutProvider>
+				<div className="App">
+					<Navigation />
+					<Switch>
+						{/* Completed */}
+						<Route path={ROUTES.SIGN_IN} component={LoginSection} />
+						<Route path={ROUTES.SIGN_UP} component={SignUpSection} />
+						<Route path={ROUTES.HOME} component={HomeSection} />
+						<Route path={ROUTES.DETAILS + "/:id"} component={DetailsSection} />
+						<Route path={ROUTES.ACCOUNT} component={UserProfileSection} />
+						<Route path={ROUTES.CART} component={CheckoutSection} />
+						{/* <Route path={ROUTES.DETAILS} component={DetailsSection} /> */}
+					</Switch>
+					{/* <UserProfileSection
               overallRating={3.7}
               deliveryCount={69}
               userName={"Hung Nguyen"}
               phone={"xxx-xxxx-xxx"}
               email={"hnguy011@plattsburgh.edu"}
             /> */}
-			</div>
+				</div>
+			</CheckoutProvider>
 		</Router>
 	);
 };
