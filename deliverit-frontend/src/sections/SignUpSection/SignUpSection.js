@@ -66,7 +66,8 @@ class SignUpFormBase extends Component {
         email: emailAddress,
         fullName: fullName,
         clientId: "2345234523452345234523452345",
-        phoneNum: phone
+        phoneNum: phone,
+        address: address
       })
     });
   };
