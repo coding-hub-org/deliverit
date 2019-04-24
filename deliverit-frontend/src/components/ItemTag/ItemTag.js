@@ -17,6 +17,9 @@ const ItemTag = props => {
         <div className="item-tag-component__quantity-buttons" />
       </div>
       <div>{props.price}$</div>
+      <div>
+          <button>x</button>
+      </div>
     </div>
   );
 };

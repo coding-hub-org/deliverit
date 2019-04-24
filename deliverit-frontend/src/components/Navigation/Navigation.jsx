@@ -18,13 +18,12 @@ const Navigation = () => (
 const NavigationAuth = () => (
 	<div className="navigation-component">
 		<div className="navigation-component--wrapper">
-			<img src={Logo} alt="" />
+		<Link to={ROUTES.EXPLORE} className="link"><img src={Logo} alt="" /></Link>
 			<SearchBar />
 			<div className="navigation-component--wrapper__links">
-				<Link to={ROUTES.EXPLORE}>Landing</Link>
-				<Link to={ROUTES.HOME}>Home</Link>
-				<Link to={ROUTES.ACCOUNT}>Account</Link>
-				<Link to={ROUTES.CART}>
+				<Link to={ROUTES.HOME} className="link">Home</Link>
+				<Link to={ROUTES.ACCOUNT} className="link">Account</Link>
+				<Link to={ROUTES.CART} className="link">
 					<i className="fas fa-shopping-cart" />
 				</Link>
 				<SignOutButton />
