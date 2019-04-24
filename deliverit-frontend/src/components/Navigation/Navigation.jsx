@@ -35,7 +35,7 @@ const NavigationAuth = () => (
 const NavigationNonAuth = () => (
 	<div className="navigation-component">
 		<div className="navigation-component--wrapper">
-			<img src={Logo} alt="" />
+		<Link to={ROUTES.EXPLORE} className="link"><img src={Logo} alt="" /></Link>
 			<div className="navigation-component--wrapper__links">
 				<Link to={ROUTES.EXPLORE}>Landing</Link>
 				<Link to={ROUTES.SIGN_IN}>Sign In</Link>
