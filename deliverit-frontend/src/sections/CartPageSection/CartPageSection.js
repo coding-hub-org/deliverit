@@ -1,11 +1,8 @@
 import React, { Component } from "react";
 import "./CartPageSection.css";
-import Footer from "../../components/Footer/Footer";
 import CartOrder from "../../components/CartOrder/CartOrder";
 import DeliveryDetailForm from "../../components/DeliveryDetailForm/DeliveryDetailForm";
 import PaymentForm from "../../components/PaymentForm/PaymentForm";
-import Title from "../../components/Title/Title";
-import SectionTitle from "../../components/SectionTitle/SectionTitle";
 
 class CartPageSection extends Component {
   constructor(props) {
@@ -15,23 +12,7 @@ class CartPageSection extends Component {
       cardNumber: null,
       cardDate: null,
       cardCode: null,
-      testList: [
-        { id: "001", name: "Gaurav", quantity: 1, price: 1 },
-        { id: "002", name: "Gaurav", quantity: 1, price: 1 },
-        { id: "003", name: "Gaurav", quantity: 1, price: 1 },
-        { id: "004", name: "Gaurav", quantity: 1, price: 1 },
-        { id: "005", name: "Gaurav", quantity: 1, price: 1 },
-        { id: "006", name: "Gaurav", quantity: 1, price: 1 },
-        { id: "007", name: "Gaurav", quantity: 1, price: 1 },
-        { id: "008", name: "Gaurav", quantity: 1, price: 1 },
-        { id: "009", name: "Gaurav", quantity: 1, price: 1 },
-        { id: "010", name: "Gaurav", quantity: 1, price: 1 },
-        { id: "011", name: "Gaurav", quantity: 1, price: 1 },
-        { id: "012", name: "Gaurav", quantity: 1, price: 1 },
-        { id: "013", name: "Gaurav", quantity: 1, price: 1 },
-        { id: "014", name: "Gaurav", quantity: 1, price: 1 },
-        { id: "015", name: "Logo", quantity: 2, price: 100 }
-      ],
+      testList: [],
       subTotal: 0,
       deliveryFee: 100,
       total: 0,
@@ -58,7 +39,7 @@ class CartPageSection extends Component {
     });
   }
 
-  handleSubmitForm = e  => {
+  handleSubmitForm = e => {
     //Do the sumbit here
   };
   handleChangeNumber = () => {};

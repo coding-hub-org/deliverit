@@ -3,7 +3,6 @@ import "./ItemTag.css";
 
 //import a test image
 import testImage from "../../assets/logo.svg";
-// ~~~
 
 const ItemTag = props => {
   return (
