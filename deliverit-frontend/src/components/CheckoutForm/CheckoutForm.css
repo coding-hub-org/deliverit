@@ -50,4 +50,5 @@
     transition: all 150ms ease;
     margin-top: 10px;
     width: 100%;
+    cursor: pointer;
   }
