@@ -35,3 +35,7 @@
     -moz-box-shadow: 0px 3px 6px 0px rgba(23,176,195,0.5);
     box-shadow: 0px 3px 6px 0px rgba(23,176,195,0.5);
 }
+
+.navigation-component--wrapper__links .link{
+    cursor: pointer;
+}

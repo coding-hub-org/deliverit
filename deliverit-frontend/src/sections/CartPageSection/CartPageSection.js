@@ -54,7 +54,6 @@ class CartPageSection extends Component {
         <div className="cart-page-section__title">
           <div className="section-title-component">Checkout</div>
         </div>
-        {/* <div /> */}
         <div className="cart-page-section__body">
           <div className="cart-page-section__body__detail">
             <DeliveryDetailForm
@@ -90,7 +89,6 @@ class CartPageSection extends Component {
             </div>
           </div>
         </div>
-        {/* <div /> */}
       </div>
     );
   }
