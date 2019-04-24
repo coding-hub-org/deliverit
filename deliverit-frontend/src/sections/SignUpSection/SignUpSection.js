@@ -1,4 +1,4 @@
-import React, { Component } from "react";
+import React, { useState } from "react";
 import { withFirebase } from "../../components/Firebase";
 import * as ROUTES from "../../constants/routes";
 import { Link, withRouter } from "react-router-dom";
@@ -6,17 +6,6 @@ import { compose } from "recompose";
 import "./SignUpSection.css";
 import Footer from "../../components/Footer/Footer";
 import RegisterImage from "../../assets/register-img.svg";
-import LogoImage from "../../assets/logo.svg";
-
-const INITIAL_STATE = {
-  fullName: "",
-  emailAddress: "",
-  phone: "",
-  address: "",
-  passwordOne: "",
-  passwordTwo: "",
-  error: null
-};
 
 const SignUpSection = () => (
   <div className="signup-section">
@@ -38,20 +27,23 @@ const SignUpSection = () => (
   </div>
 );
 
-class SignUpFormBase extends Component {
-  state = { ...INITIAL_STATE };
+const SignUpFormBase = props => {
+  const [fullName, setFullName] = useState("");
+  const [emailAddress, setEmailAddress] = useState("");
+  const [phone, setPhone] = useState("");
+  const [address, setAddress] = useState("");
+  const [passwordOne, setPasswordOne] = useState("");
+  const [passwordTwo, setPasswordTwo] = useState("");
+  const [error, setError] = useState(null);
 
-  onSubmit = event => {
-    const { fullName, emailAddress, phone, address, passwordOne } = this.state;
-
-    this.props.firebase
+  const onSubmit = event => {
+    props.firebase
       .doCreateUserWithEmailAndPassword(emailAddress, passwordOne)
       .then(authUser => {
-        this.setState({ ...INITIAL_STATE });
-        this.props.history.push(ROUTES.HOME);
+        props.history.push(ROUTES.HOME);
       })
       .catch(error => {
-        this.setState({ error });
+        setError(error);
       });
     event.preventDefault();
 
@@ -72,95 +64,77 @@ class SignUpFormBase extends Component {
     });
   };
 
-  onChange = event => {
-    this.setState({
-      [event.target.name]: event.target.value
-    });
-  };
+  const isInvalid =
+    passwordOne !== passwordTwo ||
+    passwordOne === "" ||
+    emailAddress === "" ||
+    fullName === "" ||
+    phone === "" ||
+    address === "";
 
-  render() {
-    const {
-      fullName,
-      emailAddress,
-      phone,
-      address,
-      passwordOne,
-      passwordTwo,
-      error
-    } = this.state;
-
-    const isInvalid =
-      passwordOne !== passwordTwo ||
-      passwordOne === "" ||
-      emailAddress === "" ||
-      fullName === "" ||
-      phone === "" ||
-      address === "";
-
-    return (
-      <form onSubmit={this.onSubmit}>
-        <div className="signup-section--left__middle--container">
-          <div className="signup-section--left__middle--col1">
-            <p>Full Name</p>
-            <input
-              name="fullName"
-              value={fullName}
-              onChange={this.onChange}
-              type="text"
-              placeholder="Full Name"
-            />
-            <p>Email</p>
-            <input
-              name="emailAddress"
-              value={emailAddress}
-              onChange={this.onChange}
-              type="text"
-              placeholder="Email Address"
-            />
-            <p>Phone</p>
-            <input
-              name="phone"
-              value={phone}
-              onChange={this.onChange}
-              type="text"
-              placeholder="Phone Number"
-            />
-          </div>
-          <div className="signup-section--left__middle--col2">
-            <p>Address</p>
-            <input
-              name="address"
-              value={address}
-              onChange={this.onChange}
-              type="text"
-              placeholder="Address"
-            />
-            <p>Password</p>
-            <input
-              name="passwordOne"
-              value={passwordOne}
-              onChange={this.onChange}
-              type="password"
-              placeholder="Password"
-            />
-            <p>Confirm Password</p>
-            <input
-              name="passwordTwo"
-              value={passwordTwo}
-              onChange={this.onChange}
-              type="password"
-              placeholder="Confirm Password"
-            />
-          </div>
+  return (
+    <form onSubmit={onSubmit}>
+      <div className="signup-section--left__middle--container">
+        <div className="signup-section--left__middle--col1">
+          <p>Full Name</p>
+          <input
+            name="fullName"
+            value={fullName}
+            onChange={e => setFullName(e.target.value)}
+            type="text"
+            placeholder="Full Name"
+          />
+          <p>Email</p>
+          <input
+            name="emailAddress"
+            value={emailAddress}
+            onChange={e => setEmailAddress(e.target.value)}
+            type="text"
+            placeholder="Email Address"
+          />
+          <p>Phone</p>
+          <input
+            name="phone"
+            value={phone}
+            onChange={e => setPhone(e.target.value)}
+            type="text"
+            placeholder="Phone Number"
+          />
         </div>
-        <button disabled={isInvalid} type="submit">
-          Sign Up
-        </button>
-        {error && <p>{error.message}</p>}
-      </form>
-    );
-  }
-}
+        <div className="signup-section--left__middle--col2">
+          <p>Address</p>
+          <input
+            name="address"
+            value={address}
+            onChange={e => setAddress(e.target.value)}
+            type="text"
+            placeholder="Address"
+          />
+          <p>Password</p>
+          <input
+            name="passwordOne"
+            value={passwordOne}
+            onChange={e => setPasswordOne(e.target.value)}
+            type="password"
+            placeholder="Password"
+          />
+          <p>Confirm Password</p>
+          <input
+            name="passwordTwo"
+            value={passwordTwo}
+            onChange={e => setPasswordTwo(e.target.value)}
+            type="password"
+            placeholder="Confirm Password"
+          />
+        </div>
+      </div>
+      <button disabled={isInvalid} type="submit">
+        Sign Up
+      </button>
+      {error && <p>{error.message}</p>}
+    </form>
+  );
+};
 
 const SignUpLink = () => (
   <p>
