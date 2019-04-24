@@ -14,8 +14,11 @@
   -webkit-box-shadow: 0px 3px 6px 0px rgba(23, 176, 195, 0.5);
   -moz-box-shadow: 0px 3px 6px 0px rgba(23, 176, 195, 0.5);
   box-shadow: 0px 3px 6px 0px rgba(23, 176, 195, 0.5);
+  cursor: pointer;
 }
 
 .flat-button > p {
   margin: 0;
 }
+
+
