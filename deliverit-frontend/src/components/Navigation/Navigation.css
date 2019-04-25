@@ -2,6 +2,8 @@
     display: grid;
     grid-template-columns: minmax(10vw,1fr) minmax(0,90rem) minmax(10vw,1fr);
     background-color: #FBFBFC;
+    position: fixed;
+    z-index: 100;
 }
 
 .navigation-component .navigation-component--wrapper {
