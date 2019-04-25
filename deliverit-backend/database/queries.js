@@ -32,11 +32,16 @@ const updateUserAddress = UserAddressModel => {
   }' WHERE email = '${UserAddressModel.email}';`;
 };
 
+const getAllItems = storeId => {
+  return `SELECT * FROM ItemsTable WHERE storeID='${storeId}'`;
+};
+
 module.exports = {
   storeQuery: getAllStores,
   newUser: newUserQuery,
   getUserInfo: getUserInfo,
   newAddress: newUserAddress,
   getUserAddresses: getUserAddresses,
-  updateAddress: updateUserAddress
+  updateAddress: updateUserAddress,
+  getItems: getAllItems
 };

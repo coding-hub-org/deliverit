@@ -6,6 +6,7 @@ import { compose } from "recompose";
 import "./SignUpSection.css";
 import Footer from "../../components/Footer/Footer";
 import RegisterImage from "../../assets/register-img.svg";
+// import { useHttpPost } from "../../hooks/http";
 
 const SignUpSection = () => (
   <div className="signup-section">
