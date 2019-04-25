@@ -1,40 +1,29 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import "./DetailsSection.css";
 import Footer from "../../components/Footer/Footer";
 import DetailCard from "../../components/DetailCard/DetailCard";
 
 const DetailsSection = props => {
-  const [appetizers, setAppetizers] = useState([
-    {
-      dish: "Spring Roll (3 rolls)",
-      price: 3.5,
-      description: "Deep fried vegetarian roll served with sweet and sour sauce"
-    },
-    {
-      dish: "Crab Rangoon (5 pieces)",
-      price: 4.25,
-      description:
-        "Deep fried wonton filled with cream cheese, onion, red bell pepper and crab meat served with sweet and sour sauce."
-    },
-    {
-      dish: "Avocado Rangoon (6 rolls)",
-      price: 4.25,
-      description:
-        " Deep fried wonton skin filfed with avocado and cream cheese mixture. Served with sweet and sour sauce."
-    },
-    {
-      dish: "Golden Bag (6 pieces)",
-      price: 3.95,
-      description:
-        "Deep fried rice paper skins stuffed with a ground chicken mixture. Served with sweet and sour sauce."
-    }
-  ]);
+  const [appetizers, setAppetizers] = useState([]);
+  const place = props.location.search.substring(
+    8,
+    props.location.search.length - 1
+  );
+
+  useEffect(() => {
+    fetch(`http://127.0.0.1:3000/items?storeId=${props.match.params.id}`)
+      .then(response => response.json())
+      .then(data => {
+        setAppetizers(data);
+      })
+      .catch(error => console.error(error));
+  }, []);
 
   return (
     <div className="details-section">
-      <h1>TEXAS</h1>
+      <h1>{place}</h1>
       <div className="details-section--wrapper">
-        <h1>APPETIZERS</h1>
+        <h1>ITEMS</h1>
         {appetizers.map((appetizer, idx) => (
           <DetailCard key={idx} menu={appetizer} />
         ))}

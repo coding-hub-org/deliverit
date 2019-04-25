@@ -11,6 +11,7 @@ const usersRouter = require("./routes/users");
 const chargeRouter = require("./routes/charge");
 const imageRouter = require("./routes/images");
 const addressRouter = require("./routes/addresses");
+const itemsRouter = require("./routes/items");
 
 const app = express();
 
@@ -33,6 +34,7 @@ app.use("/users", usersRouter);
 app.use("/charge", chargeRouter);
 app.use("/images", imageRouter);
 app.use("/addresses", addressRouter);
+app.use("/items", itemsRouter);
 
 // catch 404 and forward to error handler
 app.use((req, res, next) => {

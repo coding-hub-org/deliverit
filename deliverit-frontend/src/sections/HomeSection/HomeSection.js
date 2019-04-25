@@ -17,12 +17,15 @@ const HomeSection = props => {
   }, []);
 
   const cardPlaceList = store.map(data => {
-    let placeId = data.storeName
+    let placeId = data.storeID
       .toLowerCase()
       .split(" ")
       .join("-");
     return (
-      <Link to={`/details/${placeId}`}>
+      <Link
+        key={data.storeID}
+        to={`/details/${placeId}?place='${data.storeName}'`}
+      >
         <CardPlace place={data} />
       </Link>
     );

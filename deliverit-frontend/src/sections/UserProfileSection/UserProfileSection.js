@@ -4,7 +4,7 @@ import TempPicture from "../../assets/register-img.svg";
 import "./UserProfileSection.css";
 import FlatButton from "../../components/FlatButton/FlatButton";
 import Footer from "../../components/Footer/Footer";
-import PropTypes from "prop-types";
+// import PropTypes from "prop-types";
 import { AuthUserContext } from "../../components/Session";
 import DialogBox from "../../components/DialogBox/DialogBox";
 
@@ -21,7 +21,7 @@ const UserProfileSection = () => (
 const UserProfileSectionContent = props => {
   const [user, setUser] = useState([]);
   const [dialogOpen, setDialogOpen] = useState(false);
-  const [disableScrollStyle, setDisableScrollStyle] = useState({
+  const [disableScrollStyle] = useState({
     overflowY: "hidden"
   });
 
@@ -38,7 +38,11 @@ const UserProfileSectionContent = props => {
     let stars = [];
     for (var i = 0; i < Math.round(props.overallRating || 0); ++i) {
       stars.push(
-        <img className="user-profile-section--rating-star" src={StarIcon} />
+        <img
+          alt="stars"
+          className="user-profile-section--rating-star"
+          src={StarIcon}
+        />
       );
     }
     return stars;
@@ -88,6 +92,7 @@ const UserProfileSectionContent = props => {
         </div>
         <div className="user-profile-section--photo">
           <img
+            alt="stars"
             className="user-profile-section--photo-frame"
             src={
               user.imageURL === "" || user.imageURL === undefined
@@ -142,7 +147,11 @@ const UserProfileSectionContent = props => {
               <p />
             ) : (
               user.addresses.map(addr => (
-                <AccountDetail title="Address" value={addr.address} />
+                <AccountDetail
+                  key={addr.address}
+                  title="Address"
+                  value={addr.address}
+                />
               ))
             )}
             <div className="user-profile-section-button--wrapper">
@@ -165,16 +174,20 @@ const UserProfileSectionContent = props => {
             <AccountInformationHeader title="Password" />
             <hr />
             <div className="user-profile-section--password">
-              <input
-                className="user-profile-section--password-input"
-                type="password"
-                placeholder="New Password"
-              />
-              <input
-                className="user-profile-section--password-input"
-                type="password"
-                placeholder="Confirm Password"
-              />
+              <form>
+                <input
+                  className="user-profile-section--password-input"
+                  type="password"
+                  autoComplete="new-password"
+                  placeholder="New Password"
+                />
+                <input
+                  className="user-profile-section--password-input"
+                  type="password"
+                  autoComplete="new-password"
+                  placeholder="Confirm Password"
+                />
+              </form>
             </div>
             <div className="user-profile-section-button--wrapper">
               <FlatButton className="align-left" title="Change Password" />
@@ -190,11 +203,11 @@ const UserProfileSectionContent = props => {
 };
 
 UserProfileSection.propTypes = {
-  overallRating: PropTypes.number.isRequired,
-  userName: PropTypes.string.isRequired,
-  email: PropTypes.string.isRequired,
-  phone: PropTypes.string.isRequired,
-  deliveryCount: PropTypes.number.isRequired
+  // overallRating: PropTypes.number.isRequired,
+  // userName: PropTypes.string.isRequired,
+  // email: PropTypes.string.isRequired,
+  // phone: PropTypes.string.isRequired,
+  // deliveryCount: PropTypes.number.isRequired
 };
 
 const AccountInformationHeader = props => {
