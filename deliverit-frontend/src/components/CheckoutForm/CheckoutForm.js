@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import {
   injectStripe,
   CardExpiryElement,
@@ -8,17 +8,13 @@ import {
 } from "react-stripe-elements";
 import "./CheckoutForm.css";
 
-class CheckoutForm extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = { complete: false };
-    this.handleSubmit = this.handleSubmit.bind(this);
-  }
+const CheckoutForm = props => {
+  const [complete, setComplete] = useState(false);
 
-  async handleSubmit(ev) {
+  async function handleSubmit(ev) {
     ev.preventDefault();
     // User clicked submit
-    let { token } = await this.props.stripe.createToken({ name: "Name" });
+    let { token } = await props.stripe.createToken({ name: "Name" });
     let response = await fetch("http://localhost:3000/charge", {
       method: "POST",
       headers: { "Content-Type": "text/plain" },
@@ -27,37 +23,36 @@ class CheckoutForm extends React.Component {
 
     if (response.ok) {
       console.log("Purchase Complete!");
-      this.setState({ complete: true });
+      setComplete(true);
     }
   }
 
-  render() {
-    if (this.state.complete) return <h1>Purchase Complete</h1>;
-    return (
-      <div className="checkout-form-component">
-        <form onSubmit={this.handleSubmit}>
+  if (complete) return <h1>Purchase Complete</h1>;
+  return (
+    <div className="checkout-form-component">
+      <form onSubmit={handleSubmit}>
+        <label>
+          Card number
+          <CardNumberElement />
+        </label>
+        <label>
+          Expiration date
+          <CardExpiryElement />
+        </label>
+        <section className="checkout-form-component--details">
           <label>
-            Card number
-            <CardNumberElement />
+            CVC
+            <CardCVCElement />
           </label>
           <label>
-            Expiration date
-            <CardExpiryElement />
+            Postal code
+            <PostalCodeElement />
           </label>
-          <section className="checkout-form-component--details">
-            <label>
-              CVC
-              <CardCVCElement />
-            </label>
-            <label>
-              Postal code
-              <PostalCodeElement />
-            </label>
-          </section>
-          <button>PURCHASE</button>
-        </form>
-      </div>
-    );
-  }
-}
+        </section>
+        <button>PURCHASE</button>
+      </form>
+    </div>
+  );
+};
+
 export default injectStripe(CheckoutForm);

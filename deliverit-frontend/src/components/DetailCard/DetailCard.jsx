@@ -3,7 +3,7 @@ import "./DetailCard.css";
 import { CheckoutContext } from "../../sections/CheckoutSection/CheckoutSection";
 
 const DetailCard = ({ menu }) => {
-  // console.log(menu);
+  console.log(menu);
   return (
     <CheckoutContext.Consumer>
       {context => (

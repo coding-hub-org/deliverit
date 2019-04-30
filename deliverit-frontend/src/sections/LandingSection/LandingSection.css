@@ -1,0 +1,123 @@
+@import url("https://fonts.googleapis.com/css?family=Open+Sans");
+
+.landing-section {
+  box-sizing: border-box;
+}
+
+.landing-section_row1 {
+  font-family: "Open Sans", sans-serif;
+  height: 85vh;
+}
+
+.landing-section_row1--image {
+  width: 100%;
+  top: 0;
+  z-index: -100;
+  height: 100vh;
+  position: absolute;
+  top: 0;
+}
+
+.landing-section_row1--description {
+  padding: 100px;
+  max-width: 40vw;
+}
+
+.landing-section_row1--description h1 {
+  font-family: "Open Sans", sans-serif;
+  font-size: 45px;
+  font-weight: 200;
+  color: #25555b;
+  margin: 0;
+}
+
+.landing-section_row1--description h3 {
+  color: #25555b;
+  font-weight: 200;
+}
+
+.landing-section_row1--description-blue {
+  color: #2fb8c9;
+}
+
+.landing-section_row1--button {
+  padding-top: 30px;
+}
+
+.landing-section_row2 h1 {
+  font-family: "Open Sans", sans-serif;
+  text-align: center;
+  color: #25555b;
+  font-size: 40px;
+  font-weight: 200;
+}
+
+.landing-section_row2 h2 {
+  font-family: "Open Sans", sans-serif;
+  text-align: center;
+  color: #2fb8c9;
+  font-size: 18px;
+  margin: 0 25%;
+  font-weight: 200;
+}
+
+.landing-section_row2 {
+  height: 100vh;
+  padding: 100px 150px;
+  box-sizing: border-box;
+}
+
+.landing-section_row2--grid {
+  padding-top: 50px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-column-gap: 50px;
+  justify-items: center;
+}
+
+.landing-section_row2--grid h3 {
+  padding-top: 50px;
+  font-family: "Open Sans", sans-serif;
+  font-weight: 200;
+  text-align: center;
+  color: #25555b;
+}
+
+.landing-section_row2--grid-select_store,
+.landing-section_row2--grid-select_item,
+.landing-section_row2--grid-place_order {
+  display: grid;
+  justify-items: center;
+}
+
+.landing-section_row2--grid h4 {
+  width: 400px;
+  text-align: center;
+  font-family: "Open Sans", sans-serif;
+  font-weight: 200;
+  margin: 0 auto;
+  color: #2fb8c9;
+}
+
+.landing-section_row3 {
+  background: rgb(243, 243, 243, 0.3);
+  height: 100vh;
+  display: grid;
+  align-items: center;
+  padding: 0 10%;
+  grid-template-columns: 1fr 1.5fr;
+}
+
+.landing-section_row3-description h3 {
+  font-family: "Open Sans", sans-serif;
+  font-weight: 200;
+  font-size: 32px;
+  text-align: center;
+  color: #25555b;
+}
+
+.landing-section_row3-description h4 {
+  font-family: "Open Sans", sans-serif;
+  font-weight: 200;
+  font-size: 18px;
+}

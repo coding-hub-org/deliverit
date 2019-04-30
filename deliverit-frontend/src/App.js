@@ -11,6 +11,7 @@ import LoginSection from "./sections/LoginSection/LoginSection";
 import SignUpSection from "./sections/SignUpSection/SignUpSection";
 import Navigation from "./components/Navigation/Navigation";
 import HomeSection from "./sections/HomeSection/HomeSection";
+import LandingSection from "./sections/LandingSection/LandingSection";
 import UserProfileSection from "./sections/UserProfileSection/UserProfileSection";
 import CheckoutSection from "./sections/CheckoutSection/CheckoutSection";
 import DetailsSection from "./sections/DetailsSection/DetailsSection";
@@ -32,7 +33,7 @@ const App = () => {
             <Route path={ROUTES.DETAILS + "/:id"} component={DetailsSection} />
             <Route path={ROUTES.ACCOUNT} component={UserProfileSection} />
             <Route path={ROUTES.CART} component={CheckoutSection} />
-            {/* <Route path={ROUTES.DETAILS} component={DetailsSection} /> */}
+            <Route path={ROUTES.LANDING} component={LandingSection} />
           </Switch>
           {/* <UserProfileSection
               overallRating={3.7}
@@ -42,7 +43,7 @@ const App = () => {
               email={"hnguy011@plattsburgh.edu"}
             /> */}
         </div>
-        <Fotter/>
+        <Fotter />
       </CheckoutProvider>
     </Router>
   );
