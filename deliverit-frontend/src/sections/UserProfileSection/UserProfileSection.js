@@ -3,7 +3,7 @@ import StarIcon from "../../assets/star.svg";
 import TempPicture from "../../assets/register-img.svg";
 import "./UserProfileSection.css";
 import FlatButton from "../../components/FlatButton/FlatButton";
-import Footer from "../../components/Footer/Footer";
+
 // import PropTypes from "prop-types";
 import { AuthUserContext } from "../../components/Session";
 import DialogBox from "../../components/DialogBox/DialogBox";
@@ -201,9 +201,6 @@ const UserProfileSectionContent = props => {
             </div>
           </div>
         </div>
-      </div>
-      <div className="user-profile-footer">
-        <Footer />
       </div>
     </div>
   );

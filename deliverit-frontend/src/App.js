@@ -16,6 +16,7 @@ import UserProfileSection from "./sections/UserProfileSection/UserProfileSection
 import CheckoutSection from "./sections/CheckoutSection/CheckoutSection";
 import DetailsSection from "./sections/DetailsSection/DetailsSection";
 import { CheckoutProvider } from "./sections/CheckoutSection/CheckoutSection";
+import Fotter from "./components/Footer/Footer";
 
 const App = () => {
   // console.log(this.props);
@@ -42,6 +43,7 @@ const App = () => {
               email={"hnguy011@plattsburgh.edu"}
             /> */}
         </div>
+        <Fotter />
       </CheckoutProvider>
     </Router>
   );

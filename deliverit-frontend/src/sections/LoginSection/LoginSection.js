@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import LoginImage from "../../assets/login-img.svg";
-import Footer from "../../components/Footer/Footer";
 import { withRouter } from "react-router-dom";
 import { withFirebase } from "../../components/Firebase";
 import { compose } from "recompose";
@@ -31,7 +30,6 @@ const LoginSection = () => (
         </div>
       </div>
     </div>
-    <Footer />
   </div>
 );
 

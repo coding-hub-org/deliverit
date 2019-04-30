@@ -3,10 +3,9 @@ import { Elements, StripeProvider } from "react-stripe-elements";
 
 import "./CheckoutSection.css";
 import CheckoutForm from "../../components/CheckoutForm/CheckoutForm";
-import Footer from "../../components/Footer/Footer";
 import { Helmet } from "react-helmet";
 import OrderDetail from "../../components/OrderDetail/OrderDetail";
-
+import Footer from "../../components/Footer/Footer";
 export const CheckoutContext = React.createContext();
 
 export const CheckoutProvider = props => {
@@ -115,7 +114,7 @@ const CheckoutSection = () => {
                 <OrderDetail items={context.state.testList} />
               </div>
             </div>
-            <Footer />
+            {/* <Footer /> */}
           </div>
         </StripeProvider>
       )}

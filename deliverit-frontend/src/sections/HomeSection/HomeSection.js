@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 
 import "./HomeSection.css";
 import CardPlace from "../../components/CardPlace/CardPlace";
-import Footer from "../../components/Footer/Footer";
+
 import { Link } from "react-router-dom";
 
 const HomeSection = props => {
@@ -34,7 +34,6 @@ const HomeSection = props => {
   return (
     <div className={"home-section"}>
       <div className={"home-section--wrapper"}>{cardPlaceList}</div>
-      <Footer />
     </div>
   );
 };
