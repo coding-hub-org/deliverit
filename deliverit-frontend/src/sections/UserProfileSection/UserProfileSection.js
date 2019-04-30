@@ -7,6 +7,7 @@ import Footer from "../../components/Footer/Footer";
 // import PropTypes from "prop-types";
 import { AuthUserContext } from "../../components/Session";
 import DialogBox from "../../components/DialogBox/DialogBox";
+import { useHttpGet } from "../../hooks/http";
 
 const UserProfileSection = () => (
   <div>
@@ -19,6 +20,12 @@ const UserProfileSection = () => (
 );
 
 const UserProfileSectionContent = props => {
+  // console.log("WTF");
+  // const [isLoading, fetchedData] = useHttpGet(
+  //   `http://127.0.0.1:3000/users?email=${props.user.email}`,
+  //   []
+  // );
+
   const [user, setUser] = useState([]);
   const [dialogOpen, setDialogOpen] = useState(false);
   const [disableScrollStyle] = useState({
@@ -27,7 +34,7 @@ const UserProfileSectionContent = props => {
 
   const closeDialog = e => {
     setDialogOpen(false);
-    fetchData();
+    // fetchData();
   };
 
   const handleClick = e => {

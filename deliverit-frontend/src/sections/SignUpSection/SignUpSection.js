@@ -6,7 +6,7 @@ import { compose } from "recompose";
 import "./SignUpSection.css";
 import Footer from "../../components/Footer/Footer";
 import RegisterImage from "../../assets/register-img.svg";
-// import { useHttpPost } from "../../hooks/http";
+import { useHttpPost } from "../../hooks/http";
 
 const SignUpSection = () => (
   <div className="signup-section">
@@ -48,21 +48,15 @@ const SignUpFormBase = props => {
       });
     event.preventDefault();
 
-    //store to database
-    fetch("http://127.0.0.1:3000/users", {
-      method: "POST",
-      headers: {
-        Accept: "application/json",
-        "Content-Type": "application/json"
-      },
-      body: JSON.stringify({
-        email: emailAddress,
-        fullName: fullName,
-        clientId: "2345234523452345234523452345",
-        phoneNum: phone,
-        address: address
-      })
+    let body = JSON.stringify({
+      email: emailAddress,
+      fullName: fullName,
+      clientId: "2345234523452345234523452345",
+      phoneNum: phone,
+      address: address
     });
+
+    useHttpPost("http://127.0.0.1:3000/users", body);
   };
 
   const isInvalid =
